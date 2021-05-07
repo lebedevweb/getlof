@@ -88,16 +88,7 @@ html(lang="ru")
             input(class="input_search" type="search" placeholder="Например: Суп Том Ям")
           button(class="btn btn_filter") Фильтры
         div(class="home_catalogue_row")
-          article(class="home_catalogue_product")
-            div(class="home_catalogue_product_image")
-              img(src="/images/home/menu/01.jpg" alt="" width="465" height="274")
-            div(class="home_catalogue_product_hidden")
-            div(class="home_catalogue_product_content")
-              header(class="home_catalogue_product_header")
-                h3 Суп Том Ям с рисом и морепродуктами
-                  span 500г
-                p Классический кисло-острый суп на курином бульоне с кокосовым молоком, тигровыми креветками, голубыми мидиями в ракушках, зелёным луком, томатами черри, грибами шиитаке, кинзой и перцем чили. Подаётся с отварным рисом и долькой лайма.
-
+          include components/product_home.pug
 
 
 
