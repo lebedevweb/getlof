@@ -1,0 +1,70 @@
+.slider
+  position: relative
+  height: 400px
+
+  &_back,
+  &_next
+    position: absolute
+    display: flex
+    width: 50px
+    height: 50px
+    top: calc(50% - 25px)
+    border-radius: 50%
+    background: $light
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
+    cursor: pointer
+    z-index: 20
+
+    & > svg
+      display: block
+      fill: $dark
+      height: 20px
+      margin: auto
+
+  &_back
+    left: -25px
+
+  &_next
+    right: -25px
+
+
+  &_list
+    width: 100%
+    height: 100%
+    border-radius: 15px
+    overflow: hidden
+
+  &_item
+    position: relative
+    display: none
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    animation-name: fade
+    animation-duration: 1s
+
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba($dark,.5)
+
+    & > h1
+      position: relative
+      max-width: 556px
+      font-weight: 500
+      font-size: 48px
+      color: $light
+      margin-left: 7%
+      animation-name: fade
+      animation-duration: 1s
+
+    &.active
+      display: flex
+      align-items: center

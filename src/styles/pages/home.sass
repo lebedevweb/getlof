@@ -1,0 +1,177 @@
+.home
+  &_title
+    font-weight: 700
+    font-size: 46px
+    margin-bottom: 20px
+
+  &_why
+    &_blocks
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 25%
+      max-width: 350px
+      border-radius: 10px
+      padding: 2.2% 1.5%
+
+      & > svg
+        fill: $light
+
+      & > div
+        width: 58%
+        color: $light
+
+        & > h3
+          font-weight: 700
+          font-size: 32px
+          margin-bottom: 10px
+
+        & > p
+          font-weight: bold
+          font-size: 18px
+
+          & > span
+            display: block
+
+      &:first-child
+        background: linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
+
+        & > svg
+          width: 100px
+
+      &:nth-child(2)
+        background: linear-gradient(90deg, #D66D75 0%, #E29587 100%)
+
+        & > svg
+          width: 100px
+
+      &:nth-child(3)
+        background: linear-gradient(89.87deg, #556270 0.13%, #FF6B6B 117.72%)
+
+        & > svg
+          width: 100px
+
+      &:last-child
+        background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%)
+
+        & > svg
+          width: 70px
+
+      &_row
+        display: flex
+        justify-content: space-between
+
+
+  &_rests
+    &_row
+      display: flex
+      justify-content: space-between
+
+    &_item
+      box-sizing: border-box
+      width: 33%
+      max-width: 465px
+
+      &:hover .home_rests_image
+        transform: scale(1.2)
+
+    &_image
+      display: block
+      width: 100%
+      transition: transform ease-out .4s
+
+      &_container
+        overflow: hidden
+        width: 100%
+        border-radius: 15px 15px 0 0
+
+    &_content
+      background-color: $light
+      border-radius: 0 0 15px 15px
+      padding: 20px
+
+      & > h3
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 10px
+
+      & > p
+        font-size: 18px
+
+    &_link
+      position: relative
+      text-decoration: none
+      color: inherit
+
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 0
+        height: 2px
+        background-color: $dark
+        transition: width ease-out .3s
+
+      &:hover::before
+        width: 100%
+
+
+  &_catalogue
+    &_header
+      display: flex
+      margin-bottom: 40px
+
+    &_row
+      display: flex
+
+    &_product
+      position: relative
+      width: 33%
+      max-width: 465px
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
+      border-radius: 15px
+
+      &:hover .home_catalogue_product_image > img
+        transform: scale(1.2)
+
+      &_image
+        overflow: hidden
+        border-radius: 10px 10px 0 0
+
+        & > img
+          display: block
+          width: 100%
+          height: auto
+          transition: transform ease-out .3s
+
+      &_hidden
+        height: 187px
+
+      &_content
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 187px
+        border-radius: 0 0 15px 15px
+        background-color: $light
+
+      &_header
+        padding: 20px 20px 17px 20px
+        font-size: 18px
+
+        & > h3
+          margin-bottom: 15px
+
+          & > span
+            margin-left: 10px
+            color: rgba($dark,.5)
+
+        & > p
+          color: rgba($dark,.5)
+
+
+

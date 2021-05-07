@@ -1,0 +1,132 @@
+@import 'variables/fonts'
+@import 'variables/color'
+
+*
+  padding: 0
+  margin: 0
+
+body
+  min-width: 320px
+  background-color: $default
+  font-family: $font-body
+  font-weight: 400
+  color: $dark
+
+  margin-top: 109px
+
+//@media only screen and (max-width: 1680px)
+//  margin-top: 81px
+//
+//@media only screen and (max-width: 1199px)
+//  margin-top: 81px
+//
+//@media only screen and (max-width: 767px)
+//  margin-top: 81px
+
+h1,h2,h3,h4,h5,h6
+  font-family: $font-body
+  font-weight: 400
+  overflow-wrap: break-word
+
+p
+  overflow-wrap: break-word
+  margin: 0
+
+address
+  font-style: normal
+
+input
+  border: solid 0 transparent
+  outline: 0
+
+button
+  border: 0
+  background-color: transparent
+  cursor: pointer
+
+.container
+  box-sizing: border-box
+  max-width: 1440px
+  margin-left: auto
+  margin-right: auto
+
+  @media only screen and (max-width: 1680px)
+    width: 90%
+    padding-left: 0
+    padding-right: 0
+
+  @media only screen and (max-width: 1199px)
+    width: 100%
+    padding-left: 20px
+    padding-right: 20px
+
+  @media only screen and (max-width: 767px)
+    padding-left: 15px
+    padding-right: 15px
+
+.row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  white-space: nowrap
+  clip-path: inset(50%)
+  border: 0
+
+.padding
+  &-section
+    padding-top: 150px
+    padding-bottom: 150px
+
+    @media only screen and (max-width: 1680px)
+      padding-top: 100px
+      padding-bottom: 100px
+
+    @media only screen and (max-width: 767px)
+      padding-top: 70px
+      padding-bottom: 70px
+
+  &-page
+    padding-top: 150px
+    padding-bottom: 150px
+
+
+input, select
+  font-size: 16px
+
+
+// COMPONENTS
+//@import "common/accordion"
+@import "common/animation"
+//@import "common/attention"
+//@import "common/breadcrumbs"
+@import "common/btn"
+//@import "common/card-news"
+//@import "common/card-service"
+//@import "common/footer"
+@import "common/form"
+@import "common/header"
+@import "common/margins"
+//@import "common/nav"
+//@import "common/ninja"
+//@import "common/pagination"
+//@import "common/searchform"
+//@import "common/sidebar"
+//@import "common/toggle"
+@import "common/slider"
+
+// PAGES
+//@import "pages/404"
+//@import "pages/archive"
+//@import "pages/contacts"
+@import "pages/home"
+//@import "pages/index"
+//@import "pages/page"
+//@import "pages/services"

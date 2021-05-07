@@ -1,0 +1,103 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= "Getlof"
+    include components/ogp.pug
+    link(rel="stylesheet" href="/css/style.min.css")
+    script(src="/js/scripts.min.js")
+  body
+    include components/header.pug
+    main(class="home")
+      section(class="slider mb-50 container")
+        div(class="slider_back")
+          include ../images/back.svg
+        div(class="slider_next")
+          include ../images/next.svg
+        ul(class="slider_list")
+          li(class="slider_item" style="background-image: url(/images/slider_bg.jpg)")
+            h1 Освободись от готовки и сэкономь время.
+          li(class="slider_item" style="background-image: url(/images/slider_bg.jpg)")
+            h1 Длинный заголовок второго слайда.
+          li(class="slider_item" style="background-image: url(/images/slider_bg.jpg)")
+            h1 В разметке несколько заголовков h1, надо бы это исправить.
+      script(src="/js/scripts.min.js")
+
+      section(class="home_why mb-100 container")
+        h2(class="home_title") Почему мы?
+        div(class="home_why_blocks_row")
+          article(class="home_why_blocks")
+            include ../images/home/clock.svg
+            div
+              h3 Быстро
+              p Доставим в течении
+                span 60 - 90 мин
+
+          article(class="home_why_blocks")
+            include ../images/home/food.svg
+            div
+              h3 Вкусно
+              p Лучшие повара, лучшие продукты
+
+          article(class="home_why_blocks")
+            include ../images/home/heart.svg
+            div
+              h3 С любовью
+              p Трепетный подход к каждому блюду
+
+          article(class="home_why_blocks")
+            include ../images/home/box.svg
+            div
+              h3 Аккуратно
+              p Доставим в целости и сохранности
+
+
+      section(class="home_rests mb-100 container")
+        h2(class="home_title") Рестораны
+        div(class="home_rests_row")
+          article(class="home_rests_item")
+            div(class="home_rests_image_container")
+              img(class="home_rests_image" src="./images/home/rests/leo.jpg" alt="" width="100%" height="200")
+            div(class="home_rests_content")
+              h3
+                a(class="home_rests_link" href="#0") Леонардо дай пиццы
+              p г. Санкт-Петербург, уд. Гаврилова д.12
+
+          article(class="home_rests_item")
+            div(class="home_rests_image_container")
+              img(class="home_rests_image" src="./images/home/rests/lobby.jpg" alt="" width="100%" height="200")
+            div(class="home_rests_content")
+              h3
+                a(class="home_rests_link" href="#0") Lobby
+              p г. Санкт-Петербург, уд. Гаврилова д.12
+
+          article(class="home_rests_item")
+            div(class="home_rests_image_container")
+              img(class="home_rests_image" src="./images/home/rests/budu_eshe.jpg" alt="" width="100%" height="200")
+            div(class="home_rests_content")
+              h3
+                a(class="home_rests_link" href="#0") БудуЕще
+              p г. Санкт-Петербург, уд. Гаврилова д.12
+
+
+      section(class="home_catalogue mb-100 container")
+        h2(class="home_title") Меню
+        div(class="home_catalogue_header")
+          form(class="form_search")
+            input(class="input_search" type="search" placeholder="Например: Суп Том Ям")
+          button(class="btn btn_filter") Фильтры
+        div(class="home_catalogue_row")
+          article(class="home_catalogue_product")
+            div(class="home_catalogue_product_image")
+              img(src="/images/home/menu/01.jpg" alt="" width="465" height="274")
+            div(class="home_catalogue_product_hidden")
+            div(class="home_catalogue_product_content")
+              header(class="home_catalogue_product_header")
+                h3 Суп Том Ям с рисом и морепродуктами
+                  span 500г
+                p Классический кисло-острый суп на курином бульоне с кокосовым молоком, тигровыми креветками, голубыми мидиями в ракушках, зелёным луком, томатами черри, грибами шиитаке, кинзой и перцем чили. Подаётся с отварным рисом и долькой лайма.
+
+
+
+

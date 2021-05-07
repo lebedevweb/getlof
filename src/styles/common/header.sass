@@ -1,0 +1,57 @@
+.header
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 1030
+  background-color: $light
+  border-bottom: solid 1px $default
+
+  &_container
+    display: flex
+    box-sizing: border-box
+    max-width: 1920px
+    padding-left: 20px
+    margin-left: auto
+    margin-right: auto
+
+    & svg
+      fill: $dark
+      width: 202px
+      height: auto
+      margin-right: auto
+
+  &_button
+    display: flex
+    align-items: center
+    border-left: solid 1px $default
+    padding: 33px 40px
+
+    &.back
+      padding: 29px 30px
+
+      & > a
+        text-decoration: none
+        color: inherit
+        background-color: $default
+        padding: 5px 10px
+        border-radius: 5px
+
+    & > svg
+      fill: $dark
+      margin-right: 10px
+      width: auto
+      height: 14px
+
+    & span
+      display: flex
+      align-items: center
+      font-weight: 500
+      font-size: 18px
+
+    &_active
+      background: $primary
+      color: $light
+
+      & > svg
+        fill: $light
