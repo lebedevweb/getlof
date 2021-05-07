@@ -140,6 +140,10 @@
       &:hover .home_catalogue_product_image > img
         transform: scale(1.2)
 
+      &:hover .home_catalogue_product_description
+        -webkit-line-clamp: none
+        overflow-y: auto
+
       &_image
         overflow: hidden
         border-radius: 10px 10px 0 0
@@ -164,6 +168,7 @@
         min-height: 187px
         border-radius: 0 0 15px 15px
         background-color: $light
+        transition: height ease-out .3s
 
       &_header
         padding: 20px 20px 12px 20px
