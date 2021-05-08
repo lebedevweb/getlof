@@ -6,11 +6,10 @@ html(lang="ru")
     title= "Getlof"
     include components/ogp.pug
     link(rel="stylesheet" href="/css/style.min.css")
-    script(src="/js/scripts.min.js")
   body
     include components/header.pug
     main(class="home")
-      section(class="slider mb-50 container")
+      section(class="slider container")
         div(class="slider_back")
           include ../images/back.svg
         div(class="slider_next")
@@ -24,7 +23,7 @@ html(lang="ru")
             h1 В разметке несколько заголовков h1, надо бы это исправить.
       script(src="/js/scripts.min.js")
 
-      section(class="home_why mb-100 container")
+      section(class="home_why container")
         h2(class="home_title") Почему мы?
         div(class="home_why_blocks_row")
           article(class="home_why_blocks")
@@ -53,7 +52,7 @@ html(lang="ru")
               p Доставим в целости и сохранности
 
 
-      section(class="home_rests mb-100 container")
+      section(class="home_rests container")
         h2(class="home_title") Рестораны
         div(class="home_rests_row")
           article(class="home_rests_item")
@@ -81,14 +80,17 @@ html(lang="ru")
               p г. Санкт-Петербург, уд. Гаврилова д.12
 
 
-      section(class="home_catalogue mb-100 container")
+      section(class="home_catalogue container")
         h2(class="home_title") Меню
         div(class="home_catalogue_header")
           form(class="form_search")
             input(class="input_search" type="search" placeholder="Например: Суп Том Ям")
-          button(class="btn btn_filter") Фильтры
+          div(class="home_catalogue_filter")
+            button(class="btn btn_filter") Фильтры
+            include components/form_filter.pug
+
         div(class="home_catalogue_row")
           include components/product_home.pug
+          button(class="btn btn_more") Показать ещё
 
-
-
+    include components/footer.pug

@@ -1,0 +1,118 @@
+.footer
+  background-color: $light
+  padding-top: 50px
+
+  &_row
+    display: flex
+    justify-content: space-between
+    align-items: end
+
+  &_navigation
+    width: 100%
+
+    & > svg
+      width: 200px
+      margin-bottom: 30px
+
+  &_nav
+    & > ul
+      display: flex
+      list-style: none
+
+      & > li
+        font-size: 20px
+
+        &:nth-child(n+2)
+          margin-left: 30px
+
+        & > a
+          color: inherit
+          text-decoration-color: $light
+          transition: text-decoration-color ease-out .5s
+
+          &:hover
+            text-decoration-color: $dark
+
+  &_follow
+    min-width: 170px
+    margin-left: 100px
+
+    &_list
+      display: flex
+      list-style: none
+
+    &_item
+      display: block
+
+      &:nth-child(n+2)
+        margin-left: 10px
+
+    &_link
+      display: flex
+      width: 40px
+      height: 40px
+      background-color: $default
+      border-radius: 5px
+
+      &::before
+        content: ''
+        display: block
+        width: 22px
+        height: 22px
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        margin: auto
+
+  &_apps
+    min-width: 280px
+    margin-left: 100px
+
+    &_list
+      display: flex
+      list-style: none
+      justify-content: space-between
+
+    &_item
+      display: block
+
+      &:nth-child(n+2)
+        margin-left: 10px
+
+    &_link
+      display: flex
+      width: 135px
+      height: 40px
+
+      & > svg
+        fill: $dark
+
+  &_title
+    font-size: 14px
+    color: rgba($dark,.5)
+    margin-bottom: 10px
+
+  &_navigation,
+  &_follow,
+  &_apps
+    padding-bottom: 50px
+
+  &_copyright
+    background-color: $light
+    border-top: solid 1px $default
+    padding-top: 15px
+    padding-bottom: 15px
+
+    & > div
+      color: rgba($dark,.5)
+
+.icon
+  &_vk::before
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.03 13.21' style='fill:%23797A7B'%3E%3Cpath d='M11.73,13.6c.74,0,.74-1.06.74-1.47a1.57,1.57,0,0,1,1.46-1.46c.74,0,2,1.25,2.94,2.2.73.73.73.73,1.46.73h2.2A1.49,1.49,0,0,0,22,12.13c0-.46-.5-1.23-2.2-2.93-1.47-1.47-2.22-.71,0-3.67,1.35-1.8,2.34-3.43,2.17-3.9S18.05.46,17.6,1.13A26.38,26.38,0,0,0,15.4,4.8C14.67,6.27,14.59,7,13.93,7s-.73-1.42-.73-2.2c0-2.42.35-4.14-.73-4.4h-2.2a4.28,4.28,0,0,0-2.2.73s-.91.71-.74.74S8.8,1.56,8.8,2.6V4.07S8.81,7,8.07,7,5.87,4.07,4.4,1.87c-.58-.87-.73-.74-1.47-.74s-1.46,0-2.2,0-.82.47-.73.71c1.47,3.66,2.52,6,5.31,8.87C7.86,13.4,9.57,13.54,11,13.6,11.37,13.62,11,13.6,11.73,13.6Z' transform='translate(0.03 -0.4)'/%3E%3C/svg%3E")
+
+
+  &_instagram::before
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22' style='fill:%23797A7B'%3E%3Cpath d='M22,6.47a8,8,0,0,0-.51-2.67,5.3,5.3,0,0,0-1.28-1.95A5.45,5.45,0,0,0,18.25.58,8,8,0,0,0,15.58.07C14.4,0,14,0,11,0S7.68,0,6.51.06A8.22,8.22,0,0,0,3.84.58,5.27,5.27,0,0,0,1.89,1.85,5.32,5.32,0,0,0,.62,3.79,8.1,8.1,0,0,0,.11,6.46C.05,7.64,0,8,0,11s0,3.36.06,4.54a8,8,0,0,0,.51,2.67,5.51,5.51,0,0,0,1.28,1.95,5.29,5.29,0,0,0,1.94,1.26,8.28,8.28,0,0,0,2.67.52C7.68,22,8.05,22,11,22s3.36,0,4.53-.06a8.28,8.28,0,0,0,2.67-.52,5.62,5.62,0,0,0,3.22-3.21A8.1,8.1,0,0,0,22,15.54C22,14.36,22,14,22,11S22,7.64,22,6.47Zm-2,9a6.13,6.13,0,0,1-.38,2,3.65,3.65,0,0,1-2.09,2.09,6.13,6.13,0,0,1-2,.38C14.33,20,14,20,11.05,20S7.76,20,6.6,20a6.13,6.13,0,0,1-2-.38,3.44,3.44,0,0,1-1.26-.82,3.35,3.35,0,0,1-.82-1.26,6,6,0,0,1-.38-2.05C2.05,14.29,2,14,2,11s0-3.29.07-4.44a5.77,5.77,0,0,1,.38-2A3.24,3.24,0,0,1,3.3,3.26a3.61,3.61,0,0,1,1.26-.82,6.21,6.21,0,0,1,2.05-.38C7.77,2,8.11,2,11.05,2s3.29,0,4.44.06a6,6,0,0,1,2,.38,3.48,3.48,0,0,1,1.27.82,3.56,3.56,0,0,1,.82,1.27,6.07,6.07,0,0,1,.38,2c.05,1.16.06,1.51.06,4.44S20.05,14.29,20,15.45Z' transform='translate(-0.04)'/%3E%3Cpath d='M11,5.35A5.65,5.65,0,1,0,16.69,11,5.65,5.65,0,0,0,11,5.35Zm0,9.32A3.67,3.67,0,1,1,14.71,11,3.67,3.67,0,0,1,11,14.67Z' transform='translate(-0.04)'/%3E%3Cpath d='M18.24,5.13a1.32,1.32,0,1,1-1.32-1.32A1.33,1.33,0,0,1,18.24,5.13Z' transform='translate(-0.04)'/%3E%3C/svg%3E")
+
+  &_facebook::before
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 22' style='fill:%23797A7B'%3E%3Cpath d='M9.66,3.65h2V.15A28.4,28.4,0,0,0,8.75,0C5.85,0,3.87,1.82,3.87,5.17V8.25H.67v3.91h3.2V22H7.78V12.16h3.07l.49-3.91H7.78V5.56C7.78,4.43,8.09,3.65,9.66,3.65Z' transform='translate(-0.67)'/%3E%3C/svg%3E")

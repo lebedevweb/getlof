@@ -1,0 +1,50 @@
+footer(class="footer")
+	div(class="container footer_row")
+		section(class="footer_navigation")
+			include ../../images/Logo.svg
+			nav(class="footer_nav")
+				ul
+					li
+						a(href="#0") Рестораны
+					li
+						a(href="#0") Новости
+					li
+						a(href="#0") Контакты
+
+		section(class="footer_follow")
+			h2(class="footer_title") Присоединяйтесь к нам
+			ul(class="footer_follow_list")
+					li(class="footer_follow_item")
+						address
+							a(class="footer_follow_link icon_vk" href="#0")
+								span(class="sr-only") Vkontakte
+
+					li(class="footer_follow_item")
+						address
+							a(class="footer_follow_link icon_instagram" href="#0")
+								span(class="sr-only") Instagram
+
+					li(class="footer_follow_item")
+						address
+							a(class="footer_follow_link icon_facebook" href="#0")
+								span(class="sr-only") Facebook
+
+
+		section(class="footer_apps")
+			h2(class="footer_title") Заказывайте с телефона
+			ul(class="footer_apps_list")
+				li(class="footer_apps_item")
+					address
+						a(class="footer_apps_link" href="#0")
+							include ../../images/footer/GooglePlay_icon.svg
+							span(class="sr-only") Google play
+				li(class="footer_apps_item")
+					address
+						a(class="footer_apps_link" href="#0")
+							include ../../images/footer/AppStore_icon.svg
+							span(class="sr-only") App store
+	section(class="footer_copyright")
+		div(class="container") &#169; GETLOF 2021. Все права защищены.
+
+
+script(src="/js/scripts.min.js")

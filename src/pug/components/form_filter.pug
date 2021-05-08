@@ -1,0 +1,22 @@
+form(class="form_filter")
+  div(class="form_filter_header")
+    div
+      input(class="form_filter_button" id="price-top" name="radio" type="radio" data-name="price-top")
+      label(class="form_filter_label top" for="price-top")
+      input(class="form_filter_button" id="price-low" name="radio" type="radio" data-name="price-low")
+      label(class="form_filter_label low" for="price-low")
+      p Цена
+    div
+      input(class="form_filter_button" id="popular-top" type="radio" name="radio" data-name="popular-top")
+      label(class="form_filter_label top" for="popular-top")
+      input(class="form_filter_button" id="popular-low" type="radio" name="radio" data-name="popular-low")
+      label(class="form_filter_label low" for="popular-low")
+      p Популярность
+  div(class="form_filter_footer")
+      - var label = ['Салаты и закуски', 'Мясное', 'Супы', 'Морепродукты', 'Вегетарианское', 'Десерты']
+      - var lIndex = 1
+      - for (var i = 0; i < 6; i++)
+        div
+          input(class="form_filter_button" type="checkbox" id= "check" + lIndex)
+          label(class="form_filter_label check" for="check" + lIndex++)= label[i]
+  button(class="btn btn_default" id="btn_form_filter" type="submit") Показать

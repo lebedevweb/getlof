@@ -4,7 +4,12 @@
     font-size: 46px
     margin-bottom: 20px
 
+  & > .slider
+    margin-bottom: 50px
+
   &_why
+    margin-bottom: 100px
+
     &_blocks
       box-sizing: border-box
       display: flex
@@ -64,6 +69,8 @@
 
 
   &_rests
+    margin-bottom: 100px
+
     &_row
       display: flex
       justify-content: space-between
@@ -120,14 +127,41 @@
 
 
   &_catalogue
+    margin-bottom: 100px
+
     &_header
+      position: relative
       display: flex
       margin-bottom: 40px
+      z-index: 10
+
+    &_filter
+      position: relative
+      margin-left: 15px
+
+      & .form_filter
+        position: absolute
+        top: 47px
+        left: calc(50% - 225px)
+        transform: scaleY(0)
+        transform-origin: 0 0
+        opacity: 0
+
+        &.active
+          transform: scaleY(1)
+          opacity: 1
+          animation: scaleY .4s
 
     &_row
       display: flex
       flex-wrap: wrap
       justify-content: space-between
+
+      & > .btn_more
+        width: 33%
+        max-width: 465px
+        margin-right: auto
+        margin-left: auto
 
     &_product
       position: relative
@@ -142,7 +176,10 @@
 
       &:hover .home_catalogue_product_description
         -webkit-line-clamp: none
+        height: 200px
+        //max-height: none
         overflow-y: auto
+        animation: height .5s
 
       &_image
         overflow: hidden
@@ -155,7 +192,7 @@
           transition: transform ease-out .3s
 
       &_hidden
-        height: 187px
+        height: 225px
 
       &_content
         display: flex
@@ -165,10 +202,9 @@
         left: 0
         bottom: 0
         width: 100%
-        min-height: 187px
+        min-height: 225px
         border-radius: 0 0 15px 15px
         background-color: $light
-        transition: height ease-out .3s
 
       &_header
         padding: 20px 20px 12px 20px
@@ -176,6 +212,14 @@
 
       &_title
         margin-bottom: 15px
+
+        & > a
+          color: inherit
+          text-decoration-color: $light
+          transition: text-decoration-color ease-out .3s
+
+          &:hover
+            text-decoration-color: $dark
 
         & > span
           margin-left: 10px
@@ -187,6 +231,8 @@
         -webkit-line-clamp: 3
         -webkit-box-orient: vertical
         overflow-y: hidden
+        height: 59px
+        transition: height ease-out .3s
 
       &_footer
         display: flex
