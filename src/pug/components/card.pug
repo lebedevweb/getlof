@@ -1,0 +1,13 @@
+article(class="card")
+  div(class="card_image")
+    img(src= cardImages[i] alt="" width="465" height="274")
+  div(class="card_hidden")
+  div(class="card_content")
+    header(class="card_header")
+      h3(class="card_title")
+        a(href="#0")= cardTitle[i]
+        span 500г
+      p(class="card_description")= cardDescription[i]
+    footer(class="card_footer")
+      div(class="card_price")= cardPrice[i]
+      a(class="btn btn_card") В корзину

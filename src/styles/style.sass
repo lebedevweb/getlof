@@ -13,21 +13,21 @@ body
   line-height: 1.1
   color: $dark
 
-  margin-top: 109px
+  margin-top: 111px
 
-//@media only screen and (max-width: 1680px)
-//  margin-top: 81px
-//
-//@media only screen and (max-width: 1199px)
-//  margin-top: 81px
-//
-//@media only screen and (max-width: 767px)
-//  margin-top: 81px
+  //@media only screen and (max-width: 1680px)
+  //  margin-top: 81px
+  //
+  @media only screen and (max-width: 1199px)
+    margin-top: 85px
+
+  @media only screen and (max-width: 767px)
+    margin-top: 74px
 
 h1,h2,h3,h4,h5,h6
   font-family: $font-body
   font-weight: 400
-  //overflow-wrap: break-word
+  overflow-wrap: break-word
 
 p
   overflow-wrap: break-word
@@ -39,6 +39,13 @@ address
 input
   border: solid 0 transparent
   outline: 0
+
+input[type="number"]
+  appearance: textfield
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  display: none
 
 button
   border: 0
@@ -62,8 +69,8 @@ button
     padding-right: 20px
 
   @media only screen and (max-width: 767px)
-    padding-left: 15px
-    padding-right: 15px
+    padding-left: 10px
+    padding-right: 10px
 
 .row
   display: flex
@@ -107,9 +114,9 @@ input, select
 //@import "common/accordion"
 @import "common/animation"
 //@import "common/attention"
-//@import "common/breadcrumbs"
+@import "common/breadcrumbs"
 @import "common/btn"
-//@import "common/card-news"
+@import "common/card"
 //@import "common/card-service"
 @import "common/footer"
 @import "common/form"
@@ -124,9 +131,6 @@ input, select
 
 // PAGES
 //@import "pages/404"
-//@import "pages/archive"
 //@import "pages/contacts"
 @import "pages/home"
-//@import "pages/index"
-//@import "pages/page"
-//@import "pages/services"
+@import "pages/product"

@@ -1,5 +1,8 @@
 header(class="header")
   div(class="header_container")
+    div(class="header_button_menu" onclick="burgerToggle()")
+      div
+      div
     include ../../images/Logo.svg
     div(class="header_button")
       include ../../images/User_icon.svg
@@ -9,3 +12,8 @@ header(class="header")
       span(class="header_cart") Корзина
     div(class="header_button back")
       a(href="#0") Вернуться в меню
+    div(class="header_button_cart")
+      div(class="header_button_cart_badge")
+        span 20
+      include ../../images/Bag_icon.svg
+

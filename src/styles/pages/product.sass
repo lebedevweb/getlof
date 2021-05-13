@@ -1,0 +1,222 @@
+.product
+  margin-bottom: 180px
+
+  @media only screen and (max-width: 1199px)
+    margin-bottom: 130px
+
+  @media only screen and (max-width: 767px)
+    margin-bottom: 80px
+
+  &_card
+    display: flex
+    justify-content: space-between
+    align-items: start
+
+    @media only screen and (max-width: 1199px)
+      flex-wrap: wrap
+      justify-content: center
+
+
+  &_image
+    display: block
+    width: 49%
+    height: auto
+    filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25))
+    border-radius: 10px
+
+    @media only screen and (max-width: 1680px)
+      width: 41%
+
+    @media only screen and (max-width: 1199px)
+      width: 80%
+      margin-bottom: 60px
+
+    @media only screen and (max-width: 767px)
+      width: 100%
+      margin-bottom: 30px
+
+
+  &_content
+    width: 42%
+
+    @media only screen and (max-width: 1680px)
+      width: 52%
+
+    @media only screen and (max-width: 1199px)
+      width: 80%
+
+    @media only screen and (max-width: 767px)
+      width: 100%
+
+
+  &_header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+
+    & > h1
+      font-size: 24px
+      font-weight: 500
+      margin-right: 20px
+
+      @media only screen and (max-width: 1680px)
+        font-size: 22px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 20px
+
+
+    & > span
+      display: block
+      font-size: 18px
+
+      &::after
+        content: ' г'
+
+
+  &_body
+    &_description,
+    &_structure
+      font-size: 20px
+
+      @media only screen and (max-width: 1680px)
+        font-size: 18px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 16px
+
+    &_description
+      margin-bottom: 20px
+
+    &_title
+      font-weight: 500
+      font-size: 20px
+      margin-bottom: 20px
+
+      @media only screen and (max-width: 1680px)
+        font-size: 18px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 16px
+
+
+    &_structure
+      margin-bottom: 35px
+
+    &_energyval
+      display: flex
+      margin-bottom: 20px
+
+      @media only screen and (max-width: 1199px)
+        margin-bottom: 40px
+
+      & > span
+        display: block
+        font-size: 20px
+        text-transform: uppercase
+
+        @media only screen and (max-width: 1680px)
+          font-size: 18px
+
+        @media only screen and (max-width: 1199px)
+          font-size: 16px
+
+        &:first-child
+          font-weight: 500
+          margin-right: 30px
+
+        &:nth-child(3)
+          display: none
+          font-size: 24px
+          margin-left: auto
+
+          &::after
+            content: ' \20BD'
+
+          @media only screen and (max-width: 1199px)
+            display: block
+
+
+  &_footer
+    display: flex
+
+    @media only screen and (max-width: 1199px)
+      flex-direction: column
+      align-items: center
+
+    & > div
+      margin-right: 26px
+
+      @media only screen and (max-width: 1199px)
+        margin-bottom: 25px
+        margin-right: 0
+
+    &_price
+      font-size: 48px
+      margin-bottom: 27px
+
+      &::after
+        content: ' \20BD'
+
+      @media only screen and (max-width: 1199px)
+        display: none
+
+
+    &_add
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      & > div
+        display: flex
+        width: 152px
+        border: solid 1px #adadad
+        border-radius: 10px
+        overflow: hidden
+        margin-bottom: 23px
+
+      &_input
+        display: block
+        text-align: center
+        background-color: transparent
+        font-size: 24px
+        width: 42px
+        padding: 13px
+
+      &_minus,
+      &_plus
+        width: 50px
+        height: 55px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 20px auto
+
+      &_minus
+        border-right: solid 1px #adadad
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20.67 2'%3E%3Cpath d='M20.33,2H1.67a1,1,0,0,1,0-2H20.33a1,1,0,0,1,0,2Z' transform='translate(-0.67)' style='fill:%23333'/%3E%3C/svg%3E")
+
+      &_plus
+        border-left: solid 1px #adadad
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.33 21.33'%3E%3Cpath d='M11.5,22.17a1,1,0,0,1-1-1V12.5H1.83a1,1,0,0,1,0-2H10.5V1.83a1,1,0,0,1,2,0V10.5h8.67a1,1,0,0,1,0,2H12.5v8.67A1,1,0,0,1,11.5,22.17Z' transform='translate(-0.83 -0.83)' style='fill:%23333'/%3E%3C/svg%3E")
+
+
+  &_related
+    & > h2
+      text-align: center
+      font-weight: 500
+      font-size: 24px
+      margin-bottom: 70px
+
+    &_row
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      @media only screen and (max-width: 767px)
+        justify-content: center
+
+      & > .card
+        width: 33%
+
+        @media only screen and (max-width: 767px)
+          width: 100%

@@ -4,21 +4,100 @@
     font-size: 46px
     margin-bottom: 20px
 
+    @media only screen and (max-width: 1680px)
+      font-size: 36px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 26px
+      text-align: center
+      margin-bottom: 32px
+
+    @media only screen and (max-width: 767px)
+      font-size: 16px
+
   & > .slider
     margin-bottom: 50px
 
   &_why
     margin-bottom: 100px
 
+    @media only screen and (max-width: 1680px)
+      margin-bottom: 84px
+
+    @media only screen and (max-width: 1199px)
+      margin-bottom: 68px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 50px
+
     &_blocks
       box-sizing: border-box
       display: flex
       align-items: center
       justify-content: space-between
-      width: 25%
-      max-width: 350px
+      width: 24%
       border-radius: 10px
       padding: 2.2% 1.5%
+
+      @media only screen and (max-width: 1199px)
+        width: 48%
+
+        &:nth-child(n+3)
+          margin-top: 20px
+
+      @media only screen and (max-width: 767px)
+        padding: 3% 2.2%
+
+        &:nth-child(n+3)
+          margin-top: 10px
+
+      &:first-child
+        background: linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
+
+        & > svg
+          width: 100px
+
+          @media only screen and (max-width: 1680px)
+            width: 70px
+
+          @media only screen and (max-width: 767px)
+            width: 40px
+
+      &:nth-child(2)
+        background: linear-gradient(90deg, #D66D75 0%, #E29587 100%)
+
+        & > svg
+          width: 100px
+
+          @media only screen and (max-width: 1680px)
+            width: 70px
+
+          @media only screen and (max-width: 767px)
+            width: 38px
+
+      &:nth-child(3)
+        background: linear-gradient(89.87deg, #556270 0.13%, #FF6B6B 117.72%)
+
+        & > svg
+          width: 100px
+
+          @media only screen and (max-width: 1680px)
+            width: 70px
+
+          @media only screen and (max-width: 767px)
+            width: 40px
+
+      &:last-child
+        background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%)
+
+        & > svg
+          width: 70px
+
+          @media only screen and (max-width: 1680px)
+            width: 50px
+
+          @media only screen and (max-width: 767px)
+            width: 30px
 
       & > svg
         fill: $light
@@ -27,53 +106,76 @@
         width: 58%
         color: $light
 
+        @media only screen and (max-width: 1680px)
+          width: 66%
+
+        @media only screen and (max-width: 1199px)
+          width: 77%
+
+        @media only screen and (max-width: 767px)
+          width: 64%
+
         & > h3
           font-weight: 700
           font-size: 32px
           margin-bottom: 10px
 
+          @media only screen and (max-width: 1680px)
+            font-size: 28px
+
+          @media only screen and (max-width: 1199px)
+            font-size: 20px
+
+          @media only screen and (max-width: 767px)
+            font-size: 16px
+
         & > p
           font-weight: bold
           font-size: 18px
 
+          @media only screen and (max-width: 1680px)
+            font-size: 16px
+
+          @media only screen and (max-width: 1199px)
+            font-size: 14px
+
+          @media only screen and (max-width: 767px)
+            font-size: 12px
+
           & > span
             display: block
 
-      &:first-child
-        background: linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
-
-        & > svg
-          width: 100px
-
-      &:nth-child(2)
-        background: linear-gradient(90deg, #D66D75 0%, #E29587 100%)
-
-        & > svg
-          width: 100px
-
-      &:nth-child(3)
-        background: linear-gradient(89.87deg, #556270 0.13%, #FF6B6B 117.72%)
-
-        & > svg
-          width: 100px
-
-      &:last-child
-        background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%)
-
-        & > svg
-          width: 70px
+            @media only screen and (max-width: 767px)
+              font-size: 16px
 
       &_row
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
+
+        @media only screen and (max-width: 1199px)
+          justify-content: space-evenly
 
 
   &_rests
     margin-bottom: 100px
 
+    @media only screen and (max-width: 1680px)
+      margin-bottom: 84px
+
+    @media only screen and (max-width: 1199px)
+      margin-bottom: 68px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 50px
+
     &_row
       display: flex
       justify-content: space-between
+
+      @media only screen and (max-width: 767px)
+        flex-wrap: wrap
+        justify-content: center
 
     &_item
       box-sizing: border-box
@@ -83,9 +185,19 @@
       &:hover .home_rests_image
         transform: scale(1.2)
 
+      @media only screen and (max-width: 1680px)
+        width: 32%
+
+      @media only screen and (max-width: 767px)
+        width: 80%
+
+        &:nth-child(n+2)
+          margin-top: 40px
+
     &_image
       display: block
       width: 100%
+      height: auto
       transition: transform ease-out .4s
 
       &_container
@@ -103,8 +215,20 @@
         font-size: 24px
         margin-bottom: 10px
 
+        @media only screen and (max-width: 1199px)
+          font-size: 19px
+
+        @media only screen and (max-width: 767px)
+          font-size: 16px
+
       & > p
         font-size: 18px
+
+        @media only screen and (max-width: 1199px)
+          font-size: 16px
+
+        @media only screen and (max-width: 767px)
+          font-size: 12px
 
     &_link
       position: relative
@@ -129,11 +253,27 @@
   &_catalogue
     margin-bottom: 100px
 
+    @media only screen and (max-width: 1680px)
+      margin-bottom: 84px
+
+    @media only screen and (max-width: 1199px)
+      margin-bottom: 68px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 50px
+
     &_header
       position: relative
       display: flex
       margin-bottom: 40px
       z-index: 10
+
+      & .form_search
+        @media only screen and (max-width: 1199px)
+          width: 100%
+
+        @media only screen and (max-width: 767px)
+          width: 100%
 
     &_filter
       position: relative
@@ -147,6 +287,10 @@
         transform-origin: 0 0
         opacity: 0
 
+        @media only screen and (max-width: 1199px)
+          left: auto
+          right: 0
+
         &.active
           transform: scaleY(1)
           opacity: 1
@@ -157,95 +301,23 @@
       flex-wrap: wrap
       justify-content: space-between
 
+      @media only screen and (max-width: 767px)
+        justify-content: center
+
+      & .card
+        @media only screen and (max-width: 1680px)
+          width: 32%
+
+        @media only screen and (max-width: 767px)
+          width: 100%
+
+    & > div
+      display: flex
+
       & > .btn_more
-        width: 33%
+        width: 100%
         max-width: 465px
         margin-right: auto
         margin-left: auto
-
-    &_product
-      position: relative
-      width: 33%
-      max-width: 465px
-      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
-      border-radius: 15px
-      margin-bottom: 40px
-
-      &:hover .home_catalogue_product_image > img
-        transform: scale(1.2)
-
-      &:hover .home_catalogue_product_description
-        -webkit-line-clamp: none
-        height: 200px
-        //max-height: none
-        overflow-y: auto
-        animation: height .5s
-
-      &_image
-        overflow: hidden
-        border-radius: 10px 10px 0 0
-
-        & > img
-          display: block
-          width: 100%
-          height: auto
-          transition: transform ease-out .3s
-
-      &_hidden
-        height: 225px
-
-      &_content
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        position: absolute
-        left: 0
-        bottom: 0
-        width: 100%
-        min-height: 225px
-        border-radius: 0 0 15px 15px
-        background-color: $light
-
-      &_header
-        padding: 20px 20px 12px 20px
-        font-size: 18px
-
-      &_title
-        margin-bottom: 15px
-
-        & > a
-          color: inherit
-          text-decoration-color: $light
-          transition: text-decoration-color ease-out .3s
-
-          &:hover
-            text-decoration-color: $dark
-
-        & > span
-          margin-left: 10px
-          color: rgba($dark,.5)
-
-      &_description
-        color: rgba($dark,.5)
-        display: -webkit-box
-        -webkit-line-clamp: 3
-        -webkit-box-orient: vertical
-        overflow-y: hidden
-        height: 59px
-        transition: height ease-out .3s
-
-      &_footer
-        display: flex
-        justify-content: space-between
-        align-items: center
-        padding: 12px 20px 20px 20px
-
-      &_price
-        font-size: 20px
-        font-weight: 500
-
-        &::after
-          content: '\20BD'
-
 
 

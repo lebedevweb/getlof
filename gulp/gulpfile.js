@@ -22,7 +22,7 @@ const htmlFiles = [
 
 //Порядок подключения файлов pug
 const pugFiles = [
-  '../src/pug/index.pug'
+  '../src/pug/*.pug'
 ]
 
 //Порядок подключения файлов со стилями

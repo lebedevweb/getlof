@@ -1,0 +1,116 @@
+.card
+  position: relative
+  //width: 33%
+  max-width: 465px
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
+  border-radius: 15px
+  margin-bottom: 40px
+
+  &:hover .card_image > img
+    transform: scale(1.2)
+
+  &:hover .card_description
+    -webkit-line-clamp: none
+    height: 200px
+    //max-height: none
+    overflow-y: auto
+    animation: height .5s
+
+  &_image
+    overflow: hidden
+    border-radius: 10px 10px 0 0
+
+    & > img
+      display: block
+      width: 100%
+      height: auto
+      transition: transform ease-out .3s
+
+  &_hidden
+    height: 225px
+
+    @media only screen and (max-width: 767px)
+      display: none
+
+  &_content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    min-height: 225px
+    border-radius: 0 0 15px 15px
+    background-color: $light
+
+    @media only screen and (max-width: 767px)
+      position: relative
+      min-height: auto
+
+  &_header
+    padding: 20px 20px 12px 20px
+    font-size: 18px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+  &_title
+    margin-bottom: 15px
+
+    @media only screen and (max-width: 767px)
+      margin-bottom: 0
+
+    & > a
+      color: inherit
+      text-decoration-color: $light
+      transition: text-decoration-color ease-out .3s
+
+      &:hover
+        text-decoration-color: $dark
+
+    & > span
+      margin-left: 10px
+      color: rgba($dark,.5)
+
+  &_description
+    color: rgba($dark,.5)
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow-y: hidden
+    height: 59px
+    transition: height ease-out .3s
+
+    @media only screen and (max-width: 1199px)
+      height: 54px
+
+    @media only screen and (max-width: 767px)
+      position: absolute
+      width: 1px
+      height: 1px
+      padding: 0
+      overflow: hidden
+      clip: rect(0,0,0,0)
+      white-space: nowrap
+      clip-path: inset(50%)
+      border: 0
+
+  &_footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 12px 20px 20px 20px
+
+    @media only screen and (max-width: 767px)
+      padding: 8px 20px 20px 20px
+
+  &_price
+    font-size: 20px
+    font-weight: 500
+
+    @media only screen and (max-width: 767px)
+      font-size: 18px
+
+    &::after
+      content: '\20BD'

@@ -1,0 +1,48 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= "Getlof"
+    include components/ogp.pug
+    link(rel="stylesheet" href="/css/style.min.css")
+  body
+    include components/header.pug
+    include components/breadcrumbs.pug
+    main(class="product container")
+      article(class="product_card")
+        img(class="product_image" src="/images/product/tom_yam.jpg" width="707" height="525")
+        div(class="product_content")
+          header(class="product_header")
+            h1 Суп Том Ям
+            span 355
+          div(class="product_body")
+            p(class="product_body_description") Тайский суп на курином бульоне с мидиями, тигровыми креветками, сладкими помидорами черри и грибами шиитаке.
+            h2(class="product_body_title") Состав и энергетическая ценность:
+            p(class="product_body_structure") Бульон Том Ям (бульон куриный, кокосовое молоко, паста том ям, сливки 33%, имбирь свежий, лемонграсс свежий, сок лайма, сахар, рыбный соус), рис отварной, креветки отварные, мидии отварные, грибы шиитаке, лук порей, помидоры черри, перец чили свежий, кинза свежая.
+            div(class="product_body_energyval")
+              span к/б/ж/у
+              span 150/18/4/11
+              span 350
+          footer(class="product_footer")
+            div
+              p(class="product_footer_price") 350
+              form(class="product_footer_oneclick")
+                button(class="btn btn_outline" type="submit") Заказать в 1 клик
+            form(class="product_footer_add")
+              div
+                div(class="product_footer_add_minus" onclick="btnMinus()")
+                input(class="product_footer_add_input" type="number" value="1" min="1" max="20" step="1")
+                div(class="product_footer_add_plus" onclick="btnPlus()")
+
+              button(class="btn btn_tocart") В корзину
+
+    section(class="container product_related")
+      h2 Возможно, Вам придется по вкусу
+      .product_related_row
+        include components/card_data.pug
+          - for (var i = 0; i < 6; i++)
+            include components/card.pug
+
+
+    include components/footer.pug

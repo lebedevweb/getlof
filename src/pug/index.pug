@@ -84,13 +84,19 @@ html(lang="ru")
         h2(class="home_title") Меню
         div(class="home_catalogue_header")
           form(class="form_search")
+            label(class="sr-only") Найти:
             input(class="input_search" type="search" placeholder="Например: Суп Том Ям")
           div(class="home_catalogue_filter")
-            button(class="btn btn_filter") Фильтры
+            button(class="btn btn_filter")
+              span(class="btn_filter_text") Фильтры
             include components/form_filter.pug
 
         div(class="home_catalogue_row")
-          include components/product_home.pug
+          include components/card_data.pug
+          - for (var i = 0; i < 9; i++)
+            include components/card.pug
+
+        div
           button(class="btn btn_more") Показать ещё
 
     include components/footer.pug

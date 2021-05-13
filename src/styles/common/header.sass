@@ -15,17 +15,109 @@
     margin-left: auto
     margin-right: auto
 
-    & svg
+    @media only screen and (max-width: 1199px)
+      align-items: center
+      justify-content: space-between
+      padding: 9px 20px
+
+    & > svg
       fill: $dark
       width: 202px
       height: auto
       margin-right: auto
+
+      @media only screen and (max-width: 1199px)
+        margin-right: unset
+
+      @media only screen and (max-width: 767px)
+        width: 114px
 
   &_button
     display: flex
     align-items: center
     border-left: solid 1px $default
     padding: 33px 40px
+
+    @media only screen and (max-width: 1199px)
+      display: none
+
+    &_menu
+      position: relative
+      display: none
+      width: 30px
+      height: 30px
+      cursor: pointer
+      //border: solid 1px $default
+
+      @media only screen and (max-width: 1199px)
+        display: block
+
+      &.active
+        & > div:nth-child(1)
+          box-shadow: 0 0 0 0 $dark
+          transform: rotate(45deg)
+          transition: box-shadow .2s ease-in-out, transform .4s ease-in-out .2s
+
+
+        & > div:nth-child(2)
+          top: calc(50% - 1px)
+          transform: rotate(-45deg)
+          transition: top .2s ease-in-out, transform .4s ease-in-out .2s
+
+      & > div
+        position: absolute
+        width: 25px
+        height: 2px
+        background-color: $dark
+        z-index: -3
+
+        &:nth-child(1)
+          top: calc(50% - 1px)
+          box-shadow: 0 -8px 0 0 $dark
+          transition: box-shadow .2s ease-in-out .4s, transform .4s ease-in-out
+
+
+        &:nth-child(2)
+          top: calc(75% - 1px)
+          transition: top .2s ease-in-out .4s, transform .4s ease-in-out
+
+
+      & > svg
+        display: block
+        width: 100%
+        height: auto
+
+    &_cart
+      position: relative
+      display: none
+      width: 40px
+      height: 40px
+      //border: solid 1px $default
+
+      @media only screen and (max-width: 1199px)
+        display: flex
+        align-items: center
+
+      @media only screen and (max-width: 767px)
+        width: 30px
+        height: 30px
+
+      &_badge
+        position: absolute
+        display: flex
+        width: 23px
+        height: 23px
+        top: -2px
+        right: -9px
+        background: $primary
+        border-radius: 50%
+
+        & > span
+          color: $light
+          font-size: 14px
+          font-weight: 700
+          display: block
+          margin: auto
 
     &.back
       padding: 29px 30px
