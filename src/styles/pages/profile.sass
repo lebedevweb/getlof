@@ -1,0 +1,277 @@
+.profile
+  padding-bottom: 125px
+
+  @media only screen and (max-width: 767px)
+    padding-bottom: 50px
+
+  &_title
+    font-weight: 700
+    font-size: 46px
+    margin-bottom: 30px
+
+    @media only screen and (max-width: 767px)
+      font-size: 35px
+
+  &_row
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    @media only screen and (max-width: 1199px)
+      justify-content: center
+
+  &_card
+    box-sizing: border-box
+    max-width: 700px
+    min-height: 400px
+    background-color: #fff
+    border-radius: 10px
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
+    padding: 50px 80px
+    margin-right: 20px
+
+    @media only screen and (max-width: 1199px)
+      max-width: 760px
+      margin-right: 0
+
+    &.empty
+      display: flex
+      flex-direction: column
+      justify-content: end
+      background-position: top 50px center
+      background-repeat: no-repeat
+      background-size: 150px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 125.06'%3E%3Cpath d='M.61,111.19,26.28,125h.18a1.27,1.27,0,0,0,.47.09,1.5,1.5,0,0,0,.3,0L99,106.66a1.39,1.39,0,0,0,.75-.51,1.43,1.43,0,0,0,.27-.87L92.49,27.05a1.11,1.11,0,0,0-.41-.79L92,26.2l-.14-.11L78.47,18.51a1.38,1.38,0,0,0-1.89.51,1.38,1.38,0,0,0-.13,1.05,1.42,1.42,0,0,0,.64.84L87.3,26.65,72,30c-1.1-11.17-3.47-24.11-8.6-28.4A6.33,6.33,0,0,0,60.85.24,6.19,6.19,0,0,0,58,.11c-8.85,1.61-12,20.66-13.14,36L26.53,40.19,11.38,27.79l30.89-6.88a1.46,1.46,0,0,0,.65-.65,1.39,1.39,0,0,0,.1-.9,1.37,1.37,0,0,0-1.34-1.07L30.44,20.8c1.12-6.44,3.86-15.26,7.7-16.41,1.79-.53,4,.66,6.42,3.54a1.34,1.34,0,0,0,.94.42,1.31,1.31,0,0,0,1-.34,1.35,1.35,0,0,0,.47-.91,1.41,1.41,0,0,0-.3-1c-3.24-3.76-6.32-5.23-9.3-4.36-6.61,2-9.19,15.64-9.81,19.69L8,25.8a1.06,1.06,0,0,0-.34.12,1.22,1.22,0,0,0-.36.32l-.08.14a1.17,1.17,0,0,0-.18.41,1.34,1.34,0,0,0,0,.4c-.58,3-2.12,16.69-7,82.64a1.44,1.44,0,0,0,.09.77A1.43,1.43,0,0,0,.61,111.19ZM58.46,2.82a3.68,3.68,0,0,1,1.68.09,3.78,3.78,0,0,1,1.46.82c4.3,3.61,6.54,15.72,7.63,26.9l-21.6,4.84c1.19-15,4.15-31.44,10.8-32.65Zm-14.26,52a1.38,1.38,0,0,0,.41,1,1.35,1.35,0,0,0,1,.4,1.34,1.34,0,0,0,1-.4,1.38,1.38,0,0,0,.41-1c0-4,0-10,.47-16.39l22-5c.5,5.92.66,11.36.66,14.82a1.35,1.35,0,0,0,.41,1,1.38,1.38,0,0,0,2.35-1c0-.65,0-7.29-.69-15.43l17.7-4,7.24,75.5L28.27,122l-.71-79.24,17-3.8C44.15,46.7,44.19,53,44.2,54.78ZM9.25,29.69,24.84,42.34l.7,79.13L2.7,109.19C4.82,80.64,8.05,39.47,9.25,29.69Z' transform='translate(0 0)' style='fill:%23333'/%3E%3Cpath d='M35.84,106.25a1.42,1.42,0,0,0,.52.73,1.39,1.39,0,0,0,.86.26,1.27,1.27,0,0,0,.39,0L87.13,92.65a1.23,1.23,0,0,0,.48-.25A1.39,1.39,0,0,0,88,92a1.52,1.52,0,0,0,.16-.51,1.42,1.42,0,0,0-.05-.54,1.26,1.26,0,0,0-.25-.47,1.39,1.39,0,0,0-.41-.35A1.52,1.52,0,0,0,86.9,90a1.42,1.42,0,0,0-.54.05L36.78,104.54a1.3,1.3,0,0,0-.48.25,1.23,1.23,0,0,0-.34.41,1.17,1.17,0,0,0-.16.51A1.41,1.41,0,0,0,35.84,106.25Z' transform='translate(0 0)' style='fill:%23333'/%3E%3C/svg%3E")
+
+      & > p
+        color: rgba($dark,.5)
+        text-align: center
+        margin-bottom: 35px
+
+    @media only screen and (max-width: 767px)
+      padding: 30px 20px
+
+    &_order
+      &_button
+        display: none
+
+        &:checked + .profile_card_order_label
+          color: $light
+          background-color: $grey
+
+      &_label
+        display: inline-block
+        cursor: pointer
+        background-color: $default
+        border-radius: 20px
+        padding: 5px 10px
+        margin-right: 10px
+        transition: color ease-out .3s, background-color ease-out .3s
+        margin-bottom: 10px
+
+    &_form
+      & > .btn
+        width: 100%
+        margin-top: 30px
+
+      &_row
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+        & > label
+          width: 23%
+
+          @media only screen and (max-width: 767px)
+            width: 48%
+
+    &_title
+      font-size: 24px
+      margin-bottom: 20px
+
+    &_label
+      display: block
+      font-size: 12px
+      color: $grey
+      margin-bottom: 20px
+
+    &_input,
+    &_textarea
+      display: block
+      width: 100%
+      color: $dark
+
+    &_input
+      padding: 7px 0
+      border-bottom: 1px solid $grey
+
+    &_textarea
+      box-sizing: border-box
+      max-width: 100%
+      min-width: 80%
+      max-height: 300px
+      min-height: 80px
+      font-family: $font-body
+      background-color: $default
+      border: 0 solid transparent
+      border-radius: 5px
+      padding: 10px
+      margin-top: 10px
+      margin-bottom: 30px
+
+  &_order
+    display: flex
+    justify-content: space-between
+    align-items: start
+    border-bottom: 1px solid $default
+    padding: 10px 0
+
+    &_container
+      margin-right: 20px
+
+    &_title
+      font-weight: 500
+      font-size: 18px
+      margin-bottom: 5px
+
+      & > span:nth-child(n+2)
+        &::before
+          content: ', '
+
+      @media only screen and (max-width: 767px)
+        font-size: 16px
+
+    &_time
+      display: block
+      font-size: 14px
+
+      @media only screen and (max-width: 767px)
+        display: flex
+        flex-wrap: wrap
+
+      & > span
+        color: $grey
+
+        &::before
+          content: ' - '
+
+        @media only screen and (max-width: 767px)
+          display: block
+          margin-left: 5px
+
+    &_summ
+      box-sizing: border-box
+      border: 1px solid $default
+      border-radius: 5px
+      padding: 5px 10px
+
+      & > span::after
+        content: '\20BD'
+
+  &_orders
+    width: 360px
+
+    @media only screen and (max-width: 1199px)
+      width: 400px
+      order: -1
+
+    &_header
+      display: flex
+      justify-content: space-between
+      padding-bottom: 10px
+      border-bottom: 1px solid $default
+
+      & > h2
+        color: $grey
+        font-size: 12px
+
+        & > span
+          display: block
+          color: $dark
+          font-size: 16px
+
+      & > div
+        display: flex
+        width: 50px
+        height: 50px
+        border: 1px solid $default
+        border-radius: 5px
+
+        & > span
+          display: block
+          font-size: 12px
+          margin: auto
+
+    &_list
+      list-style: none
+
+    &_items
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 15px 0
+      border-bottom: 1px solid $default
+
+      @media only screen and (max-width: 767px)
+        flex-wrap: wrap
+
+      & > p
+        width: 200px
+        margin-right: 20px
+
+        @media only screen and (max-width: 400px)
+          width: 100%
+          margin-right: 0
+          margin-bottom: 10px
+
+    &_quantity
+      display: flex
+      align-items: center
+      margin-right: 20px
+
+    &_minus,
+    &_plus
+      width: 27px
+      height: 27px
+      background-size: 40%
+      background-position: center
+      background-repeat: no-repeat
+
+    &_minus
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 1'%3E%3Cpath d='M10.5,1H.5A.5.5,0,0,1,0,.5.5.5,0,0,1,.5,0h10a.5.5,0,0,1,.5.5A.5.5,0,0,1,10.5,1Z' style='fill:%23adadad'/%3E%3C/svg%3E")
+
+    &_plus
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 11'%3E%3Cpath d='M10.5,5H6V.5a.5.5,0,0,0-1,0V5H.5a.5.5,0,0,0,0,1H5v4.5a.5.5,0,0,0,1,0V6h4.5a.5.5,0,0,0,0-1Z' style='fill:%23adadad'/%3E%3C/svg%3E")
+
+    &_number
+      position: relative
+      display: block
+      color: $light
+      font-size: 12px
+      line-height: 2.2
+      text-align: center
+      width: 27px
+      background-color: $grey
+      border-radius: 50%
+
+    &_price
+      width: 50px
+      text-align: right
+
+      & > span::after
+        content: '\20BD'
+
+    &_footer
+      display: flex
+      justify-content: space-between
+      font-size: 24px
+      padding: 30px 0
+
+      & > span
+        display: block
+
+        &::after
+          content: '\20BD'
+
+
+

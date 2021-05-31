@@ -1,0 +1,18 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    main(class="container")
+      include components/restheader.pug
+      section(class="menu")
+        h1(class="menu_title") Пицца
+          span(class="menu_badge") 4
+        div(class="menu_row")
+          include components/card_data.pug
+            - for (var i = 0; i < 6; i++)
+              include components/card.pug
+
+
+
+    include components/footer.pug

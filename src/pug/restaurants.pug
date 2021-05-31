@@ -1,0 +1,37 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    main(class="container")
+      h1(class="control_title") Рестораны
+      div(class="control_restaurants")
+        article(class="restaurants")
+          div(class="restaurants_image_container")
+            img(class="restaurants_image" src="./images/home/rests/leo.jpg" alt="" width="100%" height="200")
+          div(class="restaurants_content")
+            h3
+              a(class="restaurants_link" href="#0") Леонардо дай пиццы
+            p г. Санкт-Петербург, уд. Гаврилова д.12
+          a(class="restaurants_settings" href="#0")
+
+        article(class="restaurants")
+          div(class="restaurants_image_container")
+            img(class="restaurants_image" src="./images/home/rests/lobby.jpg" alt="" width="100%" height="200")
+          div(class="restaurants_content")
+            h3
+              a(class="restaurants_link" href="#0") Lobby
+            p г. Санкт-Петербург, уд. Гаврилова д.12
+          a(class="restaurants_settings" href="#0")
+
+        article(class="restaurants")
+          div(class="restaurants_image_container")
+            img(class="restaurants_image" src="./images/home/rests/budu_eshe.jpg" alt="" width="100%" height="200")
+          div(class="restaurants_content")
+            h3
+              a(class="restaurants_link" href="#0") БудуЕще
+            p г. Санкт-Петербург, уд. Гаврилова д.12
+          a(class="restaurants_settings" href="#0")
+
+    include components/footer.pug

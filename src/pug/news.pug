@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    main(class="container")
+      include components/restheader.pug
+      section(class="news")
+        h1(class="news_title") Новости
+        - for(let i = 0; i < 3 ;i++)
+          include components/cardnews.pug
+        div(class="news_btnmore")
+          btn(class="btn btn_more") Показать ещё
+
+
+
+    include components/footer.pug

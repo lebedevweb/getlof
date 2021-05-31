@@ -1,0 +1,215 @@
+.coupon
+  position: relative
+  display: flex
+  background-color: $light
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  margin-bottom: 20px
+  //width: 698px
+
+  &_badge
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    width: 90%
+    border: 5px solid $coupon
+    box-sizing: border-box
+    border-radius: 10px
+    padding: 30px
+
+    @media only screen and (max-width: 1680px)
+      padding: 25px
+
+    @media only screen and (max-width: 1199px)
+      padding: 20px
+
+    @media only screen and (max-width: 767px)
+      padding: 14px
+
+    & > svg
+      fill: $coupon
+      width: 15px
+      height: auto
+
+      @media only screen and (max-width: 1680px)
+        width: 13px
+
+      @media only screen and (max-width: 1199px)
+        width: 11px
+
+      @media only screen and (max-width: 767px)
+        width: 7px
+
+    &_text
+      color: $coupon
+      font-weight: 500
+      font-size: 26px
+      text-transform: uppercase
+
+      @media only screen and (max-width: 1680px)
+        font-size: 23px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 20px
+
+      @media only screen and (max-width: 767px)
+        font-size: 16px
+
+    &_container
+      position: relative
+      display: flex
+      align-items: stretch
+      justify-content: center
+      border-right: dashed 2px $coupon
+      padding: 22px
+      width: 16.5%
+
+      &::before
+        content: ''
+        position: absolute
+        display: block
+        right: -14px
+        bottom: 8px
+        width: 26px
+        height: 32px
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 33.75'%3E%3Cpath d='M3.88,5.88C2.5,3.89,3.71,1.46,5.81.25l8.19,14,8.2-14c2.09,1.21,3.31,3.64,1.93,5.63L15.82,17.37l3.51,6a5.61,5.61,0,1,1-1.79,1.43L14,19.89l-3.54,4.9a5.63,5.63,0,0,1-.33,7.53A5.69,5.69,0,0,1,6.45,34,5.63,5.63,0,1,1,8.68,23.36l3.5-6ZM9.5,28.38a3.34,3.34,0,0,0-1-2.39,3.38,3.38,0,1,0,0,4.77A3.34,3.34,0,0,0,9.5,28.38Zm15.75,0a3.34,3.34,0,0,0-1-2.39,3.38,3.38,0,1,0,0,4.77A3.34,3.34,0,0,0,25.25,28.38Z' transform='translate(-0.5 -0.25)' style='fill:%23ec008c'/%3E%3C/svg%3E")
+
+      @media only screen and (max-width: 1680px)
+        width: 16.5%
+        padding: 18px
+
+        &::before
+          right: -12px
+          bottom: 11px
+          width: 22px
+          height: 27px
+
+      @media only screen and (max-width: 1199px)
+        padding: 14px
+
+        &::before
+          right: -10px
+          bottom: 13px
+          width: 18px
+          height: 22px
+
+      @media only screen and (max-width: 767px)
+        width: 23.5%
+        padding: 11px
+
+        &::before
+          right: -8px
+          bottom: 4px
+          width: 14px
+          height: 17px
+
+
+    &_text
+      transform: rotate(-90deg)
+
+  &_content
+    text-align: center
+    width: 78.5%
+    padding: 22px
+
+    @media only screen and (max-width: 1680px)
+      padding: 18px
+
+    @media only screen and (max-width: 1199px)
+      padding: 14px
+
+    @media only screen and (max-width: 767px)
+      padding: 11px
+
+    &_title
+      text-transform: uppercase
+      font-weight: 500
+      font-size: 40px
+      margin-bottom: 6px
+
+      @media only screen and (max-width: 1680px)
+        font-size: 32px
+        margin-top: 5px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 24px
+        margin-top: 4px
+
+      @media only screen and (max-width: 767px)
+        font-size: 16px
+        margin-top: 3px
+
+      & > span
+        display: block
+        color: $coupon
+        font-weight: 700
+        font-size: 50px
+        margin-top: 6px
+
+        @media only screen and (max-width: 1680px)
+          font-size: 42px
+          margin-top: 5px
+
+        @media only screen and (max-width: 1199px)
+          font-size: 34px
+          margin-top: 4px
+
+        @media only screen and (max-width: 767px)
+          font-size: 26px
+          margin-top: 6px
+
+    &_description
+      font-weight: 500
+      font-size: 26px
+      margin-bottom: 15px
+
+      @media only screen and (max-width: 1680px)
+        font-size: 23px
+        margin-top: 14px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 20px
+        margin-top: 13px
+
+      @media only screen and (max-width: 767px)
+        font-size: 16px
+        margin-top: 11px
+
+      & > span
+        display: block
+        color: $coupon
+        margin-top: 3px
+
+        @media only screen and (max-width: 1680px)
+          margin-top: 2px
+
+        @media only screen and (max-width: 1199px)
+          margin-top: 1px
+
+        @media only screen and (max-width: 767px)
+          margin-top: 0
+
+    &_code
+      display: inline-block
+      color: $coupon
+      font-weight: 500
+      font-size: 26px
+      text-decoration: underline
+      border: dashed 2px $coupon
+      padding: 17px 65px
+
+      @media only screen and (max-width: 1680px)
+        font-size: 23px
+        padding: 13px 50px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 20px
+        padding: 19px 35px
+
+      @media only screen and (max-width: 767px)
+        font-size: 16px
+        padding: 5px 20px

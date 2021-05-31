@@ -1,0 +1,35 @@
+doctype html
+html(lang="ru")
+	include components/head.pug
+	body
+		include components/header.pug
+		include components/tomain.pug
+		main(class="container settings")
+			h1(class="settings_title") Иван Иванович Иванов
+			section(class="settings_table_container")
+				table(class="settings_table")
+					tr(class="settings_thead")
+						th Номер заказа
+						th Дата
+						th Ресторан
+						th Сумма
+						th Статус
+					tr(class="settings_tbody")
+						td №
+							span 15-2951-215
+						td 16.05.2021
+						td Леонардо дай пиццы
+						td 3453
+							span  &#8381;
+						td Выполнен
+					tr(class="settings_tbody")
+						td №
+							span 15-2951-215
+						td 16.05.2021
+						td БудуЕще
+						td 10345
+							span  &#8381;
+						td Отклонен
+
+
+		include components/footer.pug

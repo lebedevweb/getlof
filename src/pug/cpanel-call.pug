@@ -1,0 +1,25 @@
+doctype html
+html(lang="ru")
+	include components/head.pug
+	body
+		include components/header.pug
+		include components/tomain.pug
+		main(class="container settings")
+			h1(class="settings_title") Обратный звонок
+			section(class="settings_table_container")
+				table(class="settings_table")
+					tr(class="settings_thead")
+						th Имя
+						th Тел.
+						th Статус
+					tr(class="settings_tbody")
+						td Иван Иванович Иванов
+						td +7-921-555-35-35
+						td Завершен
+					tr(class="settings_tbody")
+						td Иван Иванович Иванов
+						td +7-921-555-35-35
+						td Ожидает
+
+
+		include components/footer.pug

@@ -1,15 +1,29 @@
 .form
   &_filter
+    position: absolute
     box-sizing: border-box
-    background-color: $light
+    top: 47px
+    right: 0
     width: 450px
-    padding: 21px
+    background-color: $light
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25)
     border-radius: 10px
+    transform: scaleY(0)
+    transform-origin: 0 0
+    padding: 21px
+    opacity: 0
 
     @media only screen and (max-width: 767px)
       width: 300px
       padding: 10px
+
+    &.active
+      transform: scaleY(1)
+      opacity: 1
+      animation: scaleY .4s
+
+    &_container
+      position: relative
 
     &_header
       display: flex
@@ -104,6 +118,7 @@
 
 .input_search
   font-size: 18px
+  max-width: 720px
   width: 720px
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
   border-radius: 25px

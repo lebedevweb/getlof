@@ -1,0 +1,34 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    main(class="container profile")
+      h1(class="profile_title") Мои заказы
+      section(class="profile_card")
+        div(class="profile_order")
+          div(class="profile_order_container")
+            h2(class="profile_order_title")
+              span Lobby
+            time(class="profile_order_time") 03.04.2021, 17:45
+              span в процессе
+          div(class="profile_order_summ")
+            span 1000
+
+        div(class="profile_order")
+          div(class="profile_order_container")
+            h2(class="profile_order_title")
+              span Леонардо дай пиццы
+              span Lobby
+            time(class="profile_order_time") 03.04.2021, 17:45
+              span доставлен
+          div(class="profile_order_summ")
+            span 1000
+
+
+
+
+
+
+    include components/footer.pug

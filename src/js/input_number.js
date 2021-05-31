@@ -1,5 +1,5 @@
 function btnGetAttr() {
-  let input = document.querySelector('.product_footer_add_input'),
+  let input = document.querySelector('.input_number'),
     min = input.getAttribute('min'),
     max = input.getAttribute('max'),
     val = input.value;

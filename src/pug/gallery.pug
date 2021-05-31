@@ -1,0 +1,20 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    main(class="container")
+      include components/restheader.pug
+      section(class="gallery")
+        div(class="gallery_main")
+          img(class="gallery_main_image" src="/images/gallery/main.jpg")
+          h1(class="gallery_main_title") Привлекательный заголовок
+        div(class="gallery_row")
+          - var images = ["/images/gallery/01.jpg","/images/gallery/02.jpg","/images/gallery/03.jpg"]
+            - for (var i = 0; i < 5; i ++)
+              img(class="gallery_images" alt="" src= images[0])
+              img(class="gallery_images" alt="" src= images[1])
+              img(class="gallery_images" alt="" src= images[2])
+
+
+    include components/footer.pug

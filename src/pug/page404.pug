@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    main(class="container page404")
+      h1(class="page404_title")
+        span(class="sr-only") Ошибка
+        span 404
+      p(class="page404_description") Ой!
+        span Что-то пошло не так...
+      a(class="btn" href="#0") Вернуться на главную
+
+
+
+    include components/footer.pug

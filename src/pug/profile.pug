@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    main(class="container profile")
+      h1(class="profile_title") Личные данные
+      section(class="profile_card")
+        h2(class="profile_card_title") Профиль
+        form(class="profile_card_form")
+          label(class="profile_card_label") Имя
+            input(class="profile_card_input" type="text" value="Дмитрий" required)
+          label(class="profile_card_label") Телефон
+            input(class="profile_card_input" type="tel" value="+7 (992) 365-21-67" required)
+          label(class="profile_card_label") Электронная почта
+            input(class="profile_card_input" type="email" value="samurazzz@gmail.com"  required)
+          button(class="btn btn_form") Сохранить
+
+
+
+    include components/footer.pug

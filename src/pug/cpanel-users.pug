@@ -1,0 +1,35 @@
+doctype html
+html(lang="ru")
+	include components/head.pug
+	body
+		include components/header.pug
+		include components/tomain.pug
+		main(class="container settings")
+			h1(class="settings_title") Пользователи
+			section(class="settings_table_container")
+				table(class="settings_table")
+					tr(class="settings_thead")
+						th Имя
+						th Тел.
+						th Адрес
+						th Активность
+						th Подробнее
+					tr(class="settings_tbody")
+						td Иван Иванович Иванов
+						td +7-921-555-35-35
+						td ул. Пушкина, д.9, кв.25, 1 парад.
+						td 01.05.2021 16:47
+						td
+							a(class="settings_tbody_link" href="")
+								include ../images/settings/user_icon.svg
+					tr(class="settings_tbody")
+						td Иван Иванович Иванов
+						td +7-921-555-35-35
+						td ул. Пушкина, д.9, кв.25, 1 парад.
+						td 01.05.2021 16:47
+						td
+							a(class="settings_tbody_link" href="")
+								include ../images/settings/user_icon.svg
+
+
+		include components/footer.pug

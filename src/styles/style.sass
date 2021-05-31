@@ -7,7 +7,7 @@
 
 body
   min-width: 320px
-  background-color: $default
+  background-color: #f6f6f6
   font-family: $font-body
   font-weight: 400
   line-height: 1.1
@@ -36,9 +36,13 @@ p
 address
   font-style: normal
 
-input
+input,
+textarea
   border: solid 0 transparent
   outline: 0
+
+input, select, textarea
+  font-size: 16px
 
 input[type="number"]
   appearance: textfield
@@ -106,31 +110,34 @@ button
     padding-bottom: 150px
 
 
-input, select
-  font-size: 16px
-
-
 // COMPONENTS
-//@import "common/accordion"
 @import "common/animation"
-//@import "common/attention"
+@import "common/bonuscard"
 @import "common/breadcrumbs"
 @import "common/btn"
 @import "common/card"
-//@import "common/card-service"
+@import "common/cardnews"
+@import "common/coupon"
 @import "common/footer"
 @import "common/form"
 @import "common/header"
-//@import "common/nav"
-//@import "common/ninja"
-//@import "common/pagination"
-//@import "common/searchform"
-//@import "common/sidebar"
-//@import "common/toggle"
+@import "common/restaurants"
+@import "common/restheader"
 @import "common/slider"
+@import "common/tomain"
 
 // PAGES
 //@import "pages/404"
-//@import "pages/contacts"
+@import "pages/aboutus"
+@import "pages/contacts"
+@import "pages/control"
+@import "pages/coupons"
+@import "pages/gallery"
 @import "pages/home"
+@import "pages/menu"
+@import "pages/news"
+@import "pages/orders"
+@import "pages/page404"
 @import "pages/product"
+@import "pages/profile"
+@import "pages/settings"

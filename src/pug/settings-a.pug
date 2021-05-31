@@ -1,0 +1,64 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    main(class="container settings")
+      h1(class="control_title") Леонардо дай пиццы
+      div(class="settings_info")
+        div(class="settings_info_common")
+          div(class="settings_info_image_container")
+            img(class="settings_info_image" src="./images/settings/leo.jpg" width="500" height="500")
+            div(class="settings_info_image_settings")
+
+          div(class="settings_info_card1")
+            h2(class="settings_info_card1_title") Общая информация
+            ul(class="settings_info_card1_list")
+              li(class="settings_info_card1_item")
+                h3 Наименования
+                p Леонардо дай пиццы
+              li(class="settings_info_card1_item")
+                h3 Адрес
+                p г. Санкт-Петербург, уд. Гаврилова д.12
+
+              li(class="settings_info_card1_item")
+                h3 Доп. информация
+                p ООО “Леонардо” ИНН 123456789101
+
+        div(class="settings_info_orders")
+          div(class="settings_info_card2")
+            h2(class="settings_info_card2_title") Заказы
+              ul(class="settings_info_card2_list")
+                li(class="settings_info_card2_item")
+                  h3 Всего
+                  p 375
+                li(class="settings_info_card2_item")
+                  h3 Сегодня
+                  p 25
+                li(class="settings_info_card2_item")
+                  h3 Выполненные
+                  p 345
+                li(class="settings_info_card2_item")
+                  h3 Отмененные
+                  p 5
+
+
+
+
+          div(class="settings_info_card2")
+            h2(class="settings_info_card2_title") Продажи
+              ul(class="settings_info_card2_list")
+                li(class="settings_info_card2_item")
+                  h3 Общая сумма
+                  p 375.000
+                    span &#8381;
+                li(class="settings_info_card2_item")
+                  h3 Сегодня
+                  p 25.000
+                    span &#8381;
+
+          div(class="settings_info_button")
+            a(class="btn btn_card" href="#0") Изменить меню
+
+    include components/footer.pug

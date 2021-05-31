@@ -1,0 +1,81 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    main(class="container profile")
+      h1(class="profile_title") Оформление заказа
+      div(class="profile_row")
+        section(class="profile_card")
+          h2(class="profile_card_title") Доставка
+          form(class="profile_card_form")
+            label(class="profile_card_label") Телефон
+              input(class="profile_card_input" type="tel" value="+7(" required)
+            label(class="profile_card_label") Адрес доставки
+              input(class="profile_card_input" type="text" value="Санкт-Петербург, Тележная улица, 40" required)
+            div(class="profile_card_form_row")
+              label(class="profile_card_label")
+                input(class="profile_card_input" type="number" value="" placeholder="Подъезд"  required)
+              label(class="profile_card_label")
+                input(class="profile_card_input" type="number" value="" placeholder="Домофон" required)
+              label(class="profile_card_label")
+                input(class="profile_card_input" type="number" value="" placeholder="Этаж" required)
+              label(class="profile_card_label")
+                input(class="profile_card_input" type="number" value="" placeholder="Квартира"  required)
+            label Комментарий
+              textarea(class="profile_card_textarea" type="text" rows="3"  placeholder="Ваши пожелания к заказу")
+            h2(class="profile_card_title") Оплата
+            input(class="profile_card_order_button" id="online-pay" name="radio" type="radio" data-name="price-top")
+            label(class="profile_card_order_label" for="online-pay") Онлайн оплата
+
+            input(class="profile_card_order_button" id="google-pay" name="radio" type="radio" data-name="price-top")
+            label(class="profile_card_order_label" for="google-pay") Google Pay
+
+            input(class="profile_card_order_button" id="apple-pay" name="radio" type="radio" data-name="price-top")
+            label(class="profile_card_order_label" for="apple-pay") Apple Pay
+
+            button(class="btn btn_form") Заказать
+
+        section(class="profile_orders")
+          header(class="profile_orders_header")
+            h2 Ваш заказ в ресторане
+              span Lobby
+            div
+              span Logo
+          ul(class="profile_orders_list")
+            li(class="profile_orders_items")
+              p Суп Том Ям с рисом и морепродуктами
+              div(class="profile_orders_quantity")
+                div(class="profile_orders_minus" onclick="btnMinus()")
+                input(class="profile_orders_number input_number" type="number" value="1" min="1" max="20" step="1")
+                div(class="profile_orders_plus" onclick="btnPlus()")
+              div(class="profile_orders_price")
+                span 498
+
+            li(class="profile_orders_items")
+              p Суп Фо Бо
+              div(class="profile_orders_quantity")
+                div(class="profile_orders_minus" onclick="btnMinus()")
+                input(class="profile_orders_number input_number" type="number" value="1" min="1" max="20" step="1")
+                div(class="profile_orders_plus" onclick="btnPlus()")
+              div(class="profile_orders_price")
+                span 342
+
+            li(class="profile_orders_items")
+              p Доставка
+              div(class="profile_orders_price")
+                span 160
+
+
+          footer(class="profile_orders_footer")
+            p Итого
+            span 1000
+
+
+
+
+
+
+
+    include components/footer.pug

@@ -1,0 +1,76 @@
+.bonuscard
+  background: #37B5DE
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  padding: 10px
+  max-width: 370px
+
+  &_header
+    display: flex
+    justify-content: space-between
+    align-items: start
+    margin-bottom: 7px
+
+    & > svg
+      fill: $light
+      width: 141px
+      height: auto
+
+    & > h2
+      color: $light
+      text-align: right
+      font-weight: 500
+      font-size: 18px
+
+      & > span
+        display: block
+
+  &_work
+    display: flex
+    padding-bottom: 26px
+    border-bottom: solid 1px $light
+
+    &_time
+      text-align: center
+      font-weight: 500
+      line-height: 1.5
+      background-color: $light
+      border-radius: 10px
+      padding: 5px 11px
+
+  &_footer
+    padding-top: 26px
+
+    &_percent
+      display: flex
+      justify-content: space-between
+      margin-bottom: 30px
+
+      & > h2
+        color: $light
+        font-weight: 500
+
+        & > span
+          display: block
+          font-size: 20px
+          margin-top: 9px
+
+      & > p
+        color: $light
+        text-align: right
+        font-weight: 500
+        font-size: 18px
+
+        & > span
+          display: block
+          margin-top: 19px
+
+          &::after
+            content: '%'
+
+    &_qrcode
+      display: block
+      width: 116px
+      height: 116px
+      margin-right: auto
+      margin-left: auto

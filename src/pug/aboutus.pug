@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    main(class="container")
+      include components/restheader.pug
+
+      article(class="about")
+        h1(class="about_title") Кто мы?
+        div(class="about_description")
+          img(src="/images/aboutus/about.jpg")
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut etiam in sagittis, quis rhoncus sit lectus dictumst elementum. Sit morbi hendrerit quisque consectetur sit leo. Sed faucibus amet ipsum, purus iaculis. Amet metus gravida in elit sollicitudin vitae id gravida vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut etiam in sagittis, quis rhoncus sit lectus dictumst elementum. Sit morbi hendrerit quisque consectetur sit.
+
+      img(class="about_banner" src="/images/aboutus/banner.jpg")
+
+      h2(class="about_gallery_title") Галерея
+      div(class="about_gallery_row")
+        div(class="about_gallery_item")
+          img(src="/images/aboutus/interior.jpg")
+          h3 Интерьер
+        div(class="about_gallery_item")
+          img(src="/images/aboutus/team.jpg")
+          h3 Команда
+
+    include components/footer.pug

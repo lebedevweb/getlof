@@ -1,0 +1,36 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    main(class="container settings")
+      article(class="settings_product_card")
+        img(class="settings_product_image" src="/images/product/tom_yam.jpg" width="707" height="525")
+        form(class="settings_product_content")
+          header(class="settings_product_header")
+            input(value="Суп Том Ям")
+            label
+              input(value="355")
+          div(class="settings_product_body")
+            textarea(class="settings_product_body_description" rows="3") Тайский суп на курином бульоне с мидиями, тигровыми креветками, сладкими помидорами черри и грибами шиитаке.
+            h2(class="settings_product_body_title") Состав и энергетическая ценность:
+            textarea(class="settings_product_body_structure" rows="3") Бульон Том Ям (бульон куриный, кокосовое молоко, паста том ям, сливки 33%, имбирь свежий, лемонграсс свежий, сок лайма, сахар, рыбный соус), рис отварной, креветки отварные, мидии отварные, грибы шиитаке, лук порей, помидоры черри, перец чили свежий, кинза свежая.
+            div(class="settings_product_body_energyval")
+              span к/б/ж/у
+              span
+                label
+                  input(value="150")
+                label
+                  input(value="18")
+                label
+                  input(value="4")
+                label
+                  input(value="11")
+          footer(class="settings_product_footer")
+            div
+              label(class="settings_product_footer_price")
+                input(value=350)
+              button(class="btn btn_card") Сохранить
+
+    include components/footer.pug

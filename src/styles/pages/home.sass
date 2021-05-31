@@ -177,78 +177,6 @@
         flex-wrap: wrap
         justify-content: center
 
-    &_item
-      box-sizing: border-box
-      width: 33%
-      max-width: 465px
-
-      &:hover .home_rests_image
-        transform: scale(1.2)
-
-      @media only screen and (max-width: 1680px)
-        width: 32%
-
-      @media only screen and (max-width: 767px)
-        width: 80%
-
-        &:nth-child(n+2)
-          margin-top: 40px
-
-    &_image
-      display: block
-      width: 100%
-      height: auto
-      transition: transform ease-out .4s
-
-      &_container
-        overflow: hidden
-        width: 100%
-        border-radius: 15px 15px 0 0
-
-    &_content
-      background-color: $light
-      border-radius: 0 0 15px 15px
-      padding: 20px
-
-      & > h3
-        font-weight: 700
-        font-size: 24px
-        margin-bottom: 10px
-
-        @media only screen and (max-width: 1199px)
-          font-size: 19px
-
-        @media only screen and (max-width: 767px)
-          font-size: 16px
-
-      & > p
-        font-size: 18px
-
-        @media only screen and (max-width: 1199px)
-          font-size: 16px
-
-        @media only screen and (max-width: 767px)
-          font-size: 12px
-
-    &_link
-      position: relative
-      text-decoration: none
-      color: inherit
-
-      &:before
-        content: ''
-        display: block
-        position: absolute
-        left: 0
-        bottom: 0
-        width: 0
-        height: 2px
-        background-color: $dark
-        transition: width ease-out .3s
-
-      &:hover::before
-        width: 100%
-
 
   &_catalogue
     margin-bottom: 100px
@@ -276,25 +204,7 @@
           width: 100%
 
     &_filter
-      position: relative
       margin-left: 15px
-
-      & .form_filter
-        position: absolute
-        top: 47px
-        left: calc(50% - 225px)
-        transform: scaleY(0)
-        transform-origin: 0 0
-        opacity: 0
-
-        @media only screen and (max-width: 1199px)
-          left: auto
-          right: 0
-
-        &.active
-          transform: scaleY(1)
-          opacity: 1
-          animation: scaleY .4s
 
     &_row
       display: flex
@@ -304,7 +214,9 @@
       @media only screen and (max-width: 767px)
         justify-content: center
 
-      & .card
+      & > .card
+        margin-bottom: 40px
+
         @media only screen and (max-width: 1680px)
           width: 32%
 

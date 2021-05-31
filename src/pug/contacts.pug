@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    main(class="container")
+      include components/restheader.pug
+      section(class="contacts")
+        div(class="contacts_map")
+          div(style="position:relative;overflow:hidden;")
+            a(href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;") Санкт‑Петербург
+              a(href="https://yandex.ru/maps/geo/sankt_peterburg/53152804/?ll=30.304908%2C59.918072&source=wizgeo&utm_medium=mapframe&utm_source=maps&z=10.73" style="color:#eee;font-size:12px;position:absolute;top:14px;") Санкт-Петербург — Яндекс.Карты
+          iframe(src="https://yandex.ru/map-widget/v1/-/CCU4B6QL3B" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;")
+
+        ul(class="contacts_list")
+          li(class="contacts_item")
+            include ../images/contacts/location.svg
+            address г. Санкт-Петербург, уд. Гаврилова д.12
+          li(class="contacts_item")
+            include ../images/contacts/clock.svg
+            time 11:00 - 13:00
+          li(class="contacts_item")
+            include ../images/contacts/whatsapp.svg
+            address
+              a(href="#0") напишите нам в WhatsUp!
+          li(class="contacts_item")
+            include ../images/contacts/phone.svg
+            address
+              a(href="tel:+78123553535") +7(812)-355-35-35
+
+    include components/footer.pug

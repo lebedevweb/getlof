@@ -1,0 +1,59 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    div(class="control container")
+      header(class="control_header")
+        ul(class="control_header_list")
+          list(class="control_header_item")
+            a(class="control_header_link" href="#0")
+              include ../images/control/basket.svg
+              span Заказы
+
+          list(class="control_header_item")
+            a(class="control_header_link" href="#0")
+              include ../images/control/people.svg
+              span Пользователи
+
+          list(class="control_header_item")
+            a(class="control_header_link" href="#0")
+              include ../images/control/call.svg
+              span Обратный звонок
+
+          list(class="control_header_item")
+            a(class="control_header_link" href="#0")
+              include ../images/control/money.svg
+              span Продажи ресторанов
+
+      div(class="control_row")
+        asidea(class="control_sidebar" href="#0")
+
+          h2(class="control_sidebar_title") Заказы
+          a(class="control_sidebar_link" href="#0") Активные
+          a(class="control_sidebar_link" href="#0") Завершенные
+
+          h2(class="control_sidebar_title") Пользователи
+          a(class="control_sidebar_link" href="#0") Зарегистрированные
+          a(class="control_sidebar_link" href="#0") Заказавшие без регистрации
+
+          h2(class="control_sidebar_title") Обратный звонок
+          a(class="control_sidebar_link" href="#0") Новые
+          a(class="control_sidebar_link" href="#0") Завершенные
+
+          h2(class="control_sidebar_title") Продажи ресторанов
+          a(class="control_sidebar_link" href="#0") Леонардо дай пиццы
+          a(class="control_sidebar_link" href="#0") Lobby
+          a(class="control_sidebar_link" href="#0") БудуЕще
+
+          footer(class="control_sidebar_footer")
+            a(class="control_sidebar_link" href="#0") Настройки
+            button(class="btn btn_form") Выйти
+
+        main(class="control_main")
+          h1(class="control_main_title") Добро пожаловать в кабинет администратора!
+
+
+
+    include components/footer.pug

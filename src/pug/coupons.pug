@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    main(class="container")
+      include components/restheader.pug
+      section(class="coupons")
+        h1(class="coupons_title") Актуальные купоны на
+          time(class="coupons_title_time") 28.04.2021
+        div(class="coupons_row")
+          - for(let i = 0; i < 4 ;i++)
+            include components/coupon.pug
+        div(class="coupons_btnmore")
+          btn(class="btn btn_more") Показать ещё
+
+
+
+    include components/footer.pug

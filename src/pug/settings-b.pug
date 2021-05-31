@@ -1,0 +1,28 @@
+doctype html
+html(lang="ru")
+	include components/head.pug
+	body
+		include components/header.pug
+		include components/tomain.pug
+		main(class="container settings")
+			h1(class="control_title") Леонардо дай пиццы
+			section(class="settings_restaurant")
+				div(class="settings_info_image_container")
+					img(class="settings_info_image" src="./images/settings/leo.jpg" width="500" height="500")
+					div(class="settings_info_image_settings")
+				div(class="settings_restaurant_search")
+					form(class="form_search")
+						label(class="sr-only") Найти:
+						input(class="input_search" type="search" placeholder="Например: Суп Том Ям")
+					div(class="form_filter_container")
+						button(class="btn btn_filter")
+							span(class="btn_filter_text") Фильтры
+						include components/form_filter.pug
+
+			section(class="settings_restaurant_row")
+				include components/card_data.pug
+					- for (var i = 0; i < 6; i++)
+						include components/card_settings.pug
+
+
+		include components/footer.pug

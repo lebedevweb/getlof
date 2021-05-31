@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    main(class="container profile")
+      h1(class="profile_title") Мои заказы
+      section(class="profile_card empty")
+
+        p Вы еще не делали заказов
+        a(class="btn btn_form" href="#0") Сделать заказ
+
+
+
+    include components/footer.pug

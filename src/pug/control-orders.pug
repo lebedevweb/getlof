@@ -1,0 +1,140 @@
+doctype html
+html(lang="ru")
+  include components/head.pug
+  body
+    include components/header.pug
+    include components/tomain.pug
+    div(class="orders container")
+      aside(class="orders_sidebar")
+        h2(class="orders_sidebar_title") В работе
+        ul(class="orders_list")
+          li(class="orders_item cooking")
+            h3(class="orders_item_title") Заказ №
+              span 15-2951-235
+            p(class="orders_item_time") Сегодня
+              time 15:43
+            p(class="orders_item_price")
+              span Доставка Леонардо дай пиццы
+              span 1000
+
+          li(class="orders_item cooking")
+            h3(class="orders_item_title") Заказ №
+              span 15-2951-215
+            p(class="orders_item_time") Сегодня
+              time 15:25
+            p(class="orders_item_price")
+              span Доставка Леонардо дай пиццы
+              span 2543
+
+        h2(class="orders_sidebar_title") Доставляется
+        ul(class="orders_list")
+          li(class="orders_item delivering")
+            h3(class="orders_item_title") Заказ №
+              span 15-2951-235
+            p(class="orders_item_time") Сегодня
+              time 15:43
+            p(class="orders_item_price")
+              span Lobby
+              span 1000
+
+          li(class="orders_item delivering")
+            h3(class="orders_item_title") Заказ №
+              span 15-2941-175
+            p(class="orders_item_time") Сегодня
+              time 15:00
+            p(class="orders_item_price")
+              span БудуЕще
+              span 2543
+
+        h2(class="orders_sidebar_title") Выполнено
+        ul(class="orders_list")
+          li(class="orders_item done")
+            h3(class="orders_item_title") Заказ №
+              span 15-2951-235
+            p(class="orders_item_time") Сегодня
+              time 15:43
+            p(class="orders_item_price")
+              span Lobby
+              span 1000
+
+          li(class="orders_item done")
+            h3(class="orders_item_title") Заказ №
+              span 15-2941-175
+            p(class="orders_item_time") Сегодня
+              time 15:00
+            p(class="orders_item_price")
+              span БудуЕще
+              span 2543
+
+
+      article(class="orders_card")
+        header(class="orders_header")
+          h1(class="orders_header_title") Заказ №
+            span 15-2951-235
+            span(class="orders_header_badge cooking") В работе
+          p(class="orders_header_time") Сегодня 15:30 - Доставка Леонардо дай пиццы
+          ul(class="orders_header_list")
+            li(class="orders_header_item")
+              h2(class="orders_header_item_title") Оплата
+              p(class="orders_header_item_description") Оплата онлайн
+
+            li(class="orders_header_item")
+              h2(class="orders_header_item_title") Клиент
+              p(class="orders_header_item_description") Дмитрий
+
+            li(class="orders_header_item")
+              h2(class="orders_header_item_title") Телефон
+              p(class="orders_header_item_description") +7 (991) 321-21-76
+
+            li(class="orders_header_item")
+              h2(class="orders_header_item_title") Адрес
+              p(class="orders_header_item_description") г. Санкт-Петербург, ул. Гаврилова, д. 12
+
+        div(class="orders_body")
+          h2(class="orders_body_title") Супы:
+          ul(class="orders_body_list")
+            li(class="orders_body_item")
+              p(class="orders_body_description")
+                span(class="orders_body_quantity") 1
+                span Суп Том Ям с рисом и морепродуктами
+                span(class="orders_body_weight") 500
+              p(class="orders_body_price") 498
+
+            li(class="orders_body_item")
+              p(class="orders_body_description")
+                span(class="orders_body_quantity") 1
+                span Суп Фо Бо
+                span(class="orders_body_weight") 500
+              p(class="orders_body_price") 342
+
+          h2(class="orders_body_title") Салаты:
+          ul(class="orders_body_list")
+            li(class="orders_body_item")
+              p(class="orders_body_description")
+                span(class="orders_body_quantity") 1
+                span Салат Цезарь с креветками
+                span(class="orders_body_weight") 340
+              p(class="orders_body_price") 398
+
+          h2(class="orders_body_title") Горячее:
+          ul(class="orders_body_list")
+            li(class="orders_body_item")
+              p(class="orders_body_description")
+                span(class="orders_body_quantity") 2
+                span Паста с морепродуктами
+                span(class="orders_body_weight") 440
+              p(class="orders_body_price") 510
+
+          div(class="orders_body_delivery")
+            h2 Доставка
+            p(class="orders_body_price") 160
+
+          footer(class="orders_footer")
+            div(class="orders_footer_price")
+              h2 Итого
+              p 2418
+            form(class="orders_footer_form")
+              button(class="btn btn_default") Отменить
+              button(class="btn btn_form") Выполнить
+
+    include components/footer.pug

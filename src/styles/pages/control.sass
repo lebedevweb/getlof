@@ -1,0 +1,148 @@
+.control
+
+  &_title
+    font-weight: bold
+    font-size: 46px
+    margin-bottom: 30px
+
+
+  &_header
+    background: $light
+    border: 1px solid $grey
+    box-sizing: border-box
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25)
+    border-radius: 10px
+    padding: 40px
+    margin-bottom: 75px
+
+    @media only screen and (max-width: 767px)
+      padding: 40px 10%
+
+    &_list
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      list-style: none
+
+      @media only screen and (max-width: 1199px)
+        justify-content: space-evenly
+
+    &_item
+      display: block
+
+      @media only screen and (max-width: 1199px)
+        width: 40%
+
+        &:nth-child(n+3)
+          margin-top: 40px
+
+      @media only screen and (max-width: 767px)
+        width: 100%
+
+        &:nth-child(n+2)
+          margin-top: 40px
+
+      & a
+        display: flex
+        align-items: center
+        text-decoration: none
+        color: inherit
+
+        & > svg
+          width: 50px
+          height: 50px
+          margin-right: 10px
+
+        & > span
+          font-size: 22px
+
+
+  &_row
+    display: flex
+    justify-content: space-between
+
+    @media only screen and (max-width: 1199px)
+      flex-wrap: wrap
+
+
+  &_sidebar
+    box-sizing: border-box
+    background: $light
+    border: 1px solid $grey
+    width: 450px
+    max-width: 450px
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25)
+    border-radius: 10px
+    padding: 10px 40px 30px 40px
+    margin-bottom: 50px
+
+    &_title
+      text-align: center
+      font-weight: 500
+      font-size: 22px
+      margin-bottom: 20px
+
+      &:nth-child(n+2)
+        margin-top: 40px
+
+      @media only screen and (max-width: 767px)
+        font-size: 20px
+
+    &_link
+      display: block
+      text-decoration: none
+      color: inherit
+      font-size: 20px
+      line-height: 2
+
+      @media only screen and (max-width: 767px)
+        font-size: 18px
+
+    &_footer
+      display: flex
+      justify-content: space-between
+      align-items: end
+      margin-top: 40px
+
+      & > a
+        font-weight: 500
+        font-size: 22px
+
+        @media only screen and (max-width: 767px)
+          font-size: 20px
+
+
+  &_main
+    width: 67%
+    margin-left: 30px
+
+    @media only screen and (max-width: 1199px)
+      width: 100%
+      order: -1
+      margin-left: 0
+      margin-bottom: 40px
+
+    &_title
+      text-align: center
+      font-weight: 500
+      font-size: 24px
+
+      @media only screen and (max-width: 767px)
+        font-size: 22px
+
+
+  &_restaurants
+    display: flex
+    justify-content: space-between
+    margin-bottom: 100px
+
+    @media only screen and (max-width: 1680px)
+      margin-bottom: 84px
+
+    @media only screen and (max-width: 1199px)
+      margin-bottom: 68px
+
+    @media only screen and (max-width: 767px)
+      flex-wrap: wrap
+      justify-content: center
+      margin-bottom: 50px

@@ -1,5 +1,8 @@
 //Инициализация первого слайда
-setTimeout(slideInit,500)
+let slides = document.querySelectorAll('.slider_item');
+if (slides.length > 0) {
+  setTimeout(slideInit,500);
+}
 
 function slideInit() {
   /* Индекс слайда по умолчанию */
@@ -20,7 +23,8 @@ function slideInit() {
 
   /* Основная функция слайдера */
   function showSlides(n) {
-    let slides = document.querySelectorAll('.slider_item');
+    // let slides = document.querySelectorAll('.slider_item');
+
     if (n >= slides.length) {
       slideIndex = 0
     }

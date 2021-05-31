@@ -4,7 +4,6 @@
   max-width: 465px
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
   border-radius: 15px
-  margin-bottom: 40px
 
   &:hover .card_image > img
     transform: scale(1.2)
@@ -114,3 +113,14 @@
 
     &::after
       content: '\20BD'
+
+  &_delete
+    display: block
+    position: absolute
+    right: 0
+    top: -50px
+    width: 30px
+    height: 30px
+
+    & > svg
+      fill: $dark
