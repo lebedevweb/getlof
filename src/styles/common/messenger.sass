@@ -1,0 +1,163 @@
+.messenger
+  position: fixed
+  display: none
+  width: 390px
+  right: 25px
+  bottom: 110px
+  background-color: $light
+  border-radius: 10px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25)
+  overflow: hidden
+
+  @media only screen and (max-width: 767px)
+    width: auto
+    height: 100%
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 1040
+
+  &.active
+    display: block
+
+  &_header
+    position: relative
+    color: $light
+    text-align: center
+    background: $secondary
+    padding: 15px
+
+  &_close
+    position: absolute
+    width: 18px
+    height: 18px
+    top: 10px
+    right: 10px
+    cursor: pointer
+
+    & > svg
+      fill: $light
+
+  &_info
+    display: flex
+    align-items: center
+    padding: 15px
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25)
+
+    &_headset
+      width: 35px
+      height: 35px
+      margin-right: 7px
+
+      & > svg
+        fill: $dark
+
+    &_content
+      & > h2
+        font-weight: 500
+        font-size: 16px
+        margin-bottom: 4px
+
+      & > p
+        color: $grey
+        margin-bottom: 10px
+
+  &_content
+    position: relative
+    padding: 30px 17px 40px 17px
+
+    @media only screen and (max-width: 767px)
+      overflow-y: auto
+      overflow-x: hidden
+
+    &_login
+      padding: 0 17px
+
+      & > .btn
+        width: 100%
+        margin-top: 35px
+
+    &_input
+      display: block
+      width: 100%
+      border-bottom: 1px solid $grey
+      padding: 15px 0 10px 0
+
+      &:focus,
+      &:focus-visible
+        &::placeholder
+          color: $light
+
+    &_separator
+      display: flex
+      justify-content: space-between
+      align-items: center
+      color: $grey
+      padding: 40px 17px
+
+      &::before,
+      &::after
+        content: ''
+        display: block
+        width: 39.5%
+        height: 1px
+        background-color: $grey
+
+    &_list
+      list-style: none
+      display: flex
+      justify-content: center
+
+    &_item
+      width: 50px
+      height: 50px
+
+      &:not(:last-child)
+        margin-right: 30px
+
+  &_btn
+    position: fixed
+    display: flex
+    align-items: center
+    right: 25px
+    bottom: 25px
+    cursor: pointer
+    background: $secondary
+    border-radius: 10px
+    padding: 20px 65px
+    z-index: 1040
+
+    @media only screen and (max-width: 1199px)
+      border-radius: 50%
+      padding: 10px
+
+    @media only screen and (max-width: 767px)
+      right: 10px
+      bottom: 10px
+
+    & > svg
+      width: 35px
+      height: 35px
+      fill: $light
+
+      @media only screen and (max-width: 1199px)
+        width: 25px
+        height: 25px
+
+    & > span
+      display: block
+      color: $light
+      font-weight: 500
+      font-size: 20px
+      margin-left: 20px
+
+      @media only screen and (max-width: 1199px)
+        position: absolute
+        width: 1px
+        height: 1px
+        padding: 0
+        overflow: hidden
+        clip: rect(0,0,0,0)
+        white-space: nowrap
+        clip-path: inset(50%)
+        border: 0

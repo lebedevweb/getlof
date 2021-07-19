@@ -10,11 +10,21 @@ html(lang="ru")
           img(class="gallery_main_image" src="/images/gallery/main.jpg")
           h1(class="gallery_main_title") Привлекательный заголовок
         div(class="gallery_row")
-          - var images = ["/images/gallery/01.jpg","/images/gallery/02.jpg","/images/gallery/03.jpg"]
-            - for (var i = 0; i < 5; i ++)
-              img(class="gallery_images" alt="" src= images[0])
-              img(class="gallery_images" alt="" src= images[1])
-              img(class="gallery_images" alt="" src= images[2])
+          include components/gallery_data.pug
+            - for (var i = 0; i < 6; i ++)
+              img(class="gallery_images" data-big= imagesBig[i] data-id= i alt="" src= images[i])
+        div(class="gallery_lightbox")
+          div(class="gallery_lightbox_container")
+            header(class="gallery_lightbox_header")
+              div(class="gallery_lightbox_header_close")
+                include ../images/gallery/close.svg
+            div(class="gallery_lightbox_body")
+              img(class="gallery_lightbox_image" alt="" src="" width="auto" height="auto")
+            footer(class="gallery_lightbox_footer")
+              button(class="gallery_lightbox_btnback")
+                include ../images/gallery/back.svg
+              button(class="gallery_lightbox_btnnext")
+                include ../images/gallery/next.svg
 
 
     include components/footer.pug

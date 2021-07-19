@@ -1,0 +1,38 @@
+div(class="messenger_btn")
+  include ../../images/messenger/chat.svg
+  span Чат
+
+
+div(class="messenger")
+  header(class="messenger_header") Служба поддержки
+    div(class="messenger_close")
+      include ../../images/card/delete.svg
+  div(class="messenger_info")
+    div(class="messenger_info_headset")
+      include ../../images/messenger/headset.svg
+    div(class="messenger_info_content")
+      h2 Менеджер поддержки
+      p Время работы с 10:00 до 22:00 в будни
+
+
+  div(class="messenger_content")
+    p Пожалуйста, авторизуйтесь, чтобы мы могли наиболее оперативно решить Ваш вопрос!
+
+    form(class="messenger_content_login")
+      input(class="messenger_content_input" type="email" placeholder="Логин")
+      input(class="messenger_content_input" type="password" placeholder="Пароль")
+      input(class="btn btn_card" type="button" value="Войти")
+
+    div(class="messenger_content_separator") или
+    ul(class="messenger_content_list")
+      li(class="messenger_content_item")
+        a(href="#0")
+          include ../../images/messenger/vk.svg
+      li(class="messenger_content_item")
+        a(href="#0")
+          include ../../images/messenger/facebook.svg
+      li(class="messenger_content_item")
+        a(href="#0")
+          include ../../images/messenger/instagram.svg
+
+  footer

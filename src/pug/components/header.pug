@@ -1,9 +1,10 @@
 header(class="header")
   div(class="header_container")
-    div(class="header_button_menu" onclick="burgerToggle()")
+    div(class="header_button_menu")
       div
       div
-    include ../../images/Logo.svg
+    a(class="header_container_logo" href="#0")
+      include ../../images/Logo.svg
     div(class="header_button")
       include ../../images/User_icon.svg
       span(class="header_login") Войти

@@ -16,7 +16,6 @@
       flex-wrap: wrap
       justify-content: center
 
-
   &_image
     display: block
     width: 49%
@@ -211,12 +210,23 @@
       display: flex
       flex-wrap: wrap
       justify-content: space-between
+      margin-bottom: 150px
+
+      @media only screen and (max-width: 1199px)
+        margin-bottom: 100px
 
       @media only screen and (max-width: 767px)
         justify-content: center
+        margin-bottom: 50px
 
       & > .card
         width: 33%
 
+        &:nth-child(n+4)
+          margin-top: 20px
+
         @media only screen and (max-width: 767px)
           width: 100%
+
+          &:nth-child(n+2)
+            margin-top: 20px

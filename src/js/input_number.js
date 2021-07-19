@@ -1,27 +1,57 @@
-function btnGetAttr() {
-  let input = document.querySelector('.input_number'),
-    min = input.getAttribute('min'),
-    max = input.getAttribute('max'),
-    val = input.value;
+function getAttr() {
+  let inputs = document.querySelectorAll('.input_number'),
+    inputsArray = [];
 
-  return {'element': input, 'value': val, 'min': min, 'max': max}
-
-}
-
-function btnPlus() {
-  let attr = btnGetAttr();
-
-  if (parseInt(attr.element.value) < parseInt(attr.element.max)) {
-    attr.element.value ++
+  for (const input of inputs) {
+    let min = parseInt(input.getAttribute('min')),
+        max = parseInt(input.getAttribute('max')),
+        val = parseInt(input.value),
+        data = parseInt(input.getAttribute('data-price'));
+    inputsArray.push({'element': input, 'value': val, 'min': min, 'max': max, 'data': data})
   }
 
-  console.log(attr);
+  return inputsArray
 }
 
-function btnMinus() {
-  let attr = btnGetAttr();
+function inputOuter(value, i) {
+  return `<input class="profile_orders_number input_number" type="number" value="${value}" min="1" max="20" step="1" data-price="${getAttr()[i].data}">`
+}
 
-  if (parseInt(attr.element.value) > parseInt(attr.element.min)) {
-    attr.element.value --
+function inputPrice(value, price) {
+  return `<span class="price_text">${value * price}</span>`
+}
+
+function totalPrice() {
+  let price = document.querySelectorAll('.price_text'),
+      total = 0;
+  for (const priceKey of price) {
+    total = total + parseInt(priceKey.innerHTML)
   }
+  return `<p class="price_total">${total}</p>`
 }
+
+
+let btnPlus = document.querySelectorAll('.btnplus'),
+    btnMinus = document.querySelectorAll('.btnminus'),
+    price = document.querySelectorAll('.profile_orders_price');
+
+    for (let i = 0; i < btnMinus.length; i++) {
+      setListener(btnPlus[i],'click', () => {
+        if (getAttr()[i].value < getAttr()[i].max) {
+          getAttr()[i].element.outerHTML = inputOuter(getAttr()[i].value + 1, i)
+          if (price) {
+            price[i].innerHTML = inputPrice(getAttr()[i].value, getAttr()[i].data)
+            document.querySelector('.price_total').outerHTML = totalPrice()
+          }
+        }
+      })
+      setListener(btnMinus[i],'click', () => {
+        if (getAttr()[i].value > getAttr()[i].min) {
+          getAttr()[i].element.outerHTML = inputOuter(getAttr()[i].value - 1, i)
+          if (price) {
+            price[i].innerHTML = inputPrice(getAttr()[i].value, getAttr()[i].data)
+            document.querySelector('.price_total').outerHTML = totalPrice()
+          }
+        }
+      })
+    }

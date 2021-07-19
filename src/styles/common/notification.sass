@@ -1,0 +1,71 @@
+.notification
+  display: none
+  background-color: $light
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  padding: 12px
+  opacity: 0
+
+  &.active
+    display: block
+    opacity: 1
+    animation: ease-out notify 1s
+
+  &:not(:last-child)
+    margin-bottom: 20px
+
+  & svg
+    fill: $dark
+    width: 100%
+    height: auto
+
+  &_container
+    position: fixed
+    top: 100px
+    right: 20px
+    width: 335px
+    z-index: 20
+
+    @media only screen and (max-width: 767px)
+      top: 60px
+      right: 10px
+      width: 300px
+
+
+  &_header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 10px
+
+    & > h2
+      font-size: 16px
+      font-weight: 500
+
+  &_close
+    cursor: pointer
+    width: 13px
+    height: 13px
+
+  &_footer
+    display: flex
+    align-items: center
+
+  &_icon
+    width: 65px
+    margin-right: 15px
+
+  &_content
+    & > p
+      font-weight: 500
+
+      & > span
+        display: block
+        margin-top: 7px
+
+
+@keyframes notify
+  from
+    opacity: 0
+  to
+    opacity: 1

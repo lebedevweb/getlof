@@ -6,7 +6,6 @@ const gulp          = require('gulp'),  //Подключаем Gulp
       del           = require('del'), //Удаление файлов
       browserSync   = require('browser-sync').create(), //Синхронизация с браузером
       notify        = require('gulp-notify'),
-      gcmq 		      = require('gulp-group-css-media-queries'),
       sourcemaps    = require('gulp-sourcemaps'), //Создает карту для препроцессоров стилей
       sass          = require('gulp-sass'), //Sass препроцессор
       less          = require('gulp-less'), //Less препроцессор
@@ -57,11 +56,16 @@ gulp.task('styles', () => {
   return gulp.src(styleFiles)
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-    //.pipe(rename({ suffix: '.min', prefix : '' }))
-    // .pipe(concat('style.min.css'))
-    // .pipe(gcmq())
-    .pipe(autoprefixer(['last 15 versions']))
-    .pipe(cleancss({level: {1: {specialComments: 0}}})) // Opt., comment out when debugging
+    .pipe(autoprefixer(['>0.2%','not dead','not op_mini all']))
+    .pipe(cleancss({
+      level: {
+        2: {
+          all: true,
+          removeUnusedAtRules: false,
+          restructureRules: false
+        }
+      }
+    })) // Opt., comment out when debugging
   .pipe(sourcemaps.write())
   .pipe(rename({
     suffix: '.min'
@@ -73,13 +77,10 @@ gulp.task('styles', () => {
 
 //Таск для обработки скриптов
 gulp.task('scripts', () => {
-  //Шаблон для поиска файлов JS
-  //Всей файлы по шаблону './src/js/**/*.js'
   return gulp.src(scriptFiles)
-    //Объединение файлов в один
     .pipe(sourcemaps.init())
     .pipe(babel({
-      presets: ['@babel/env']
+      presets: ['@babel/preset-env']
     }))
     .pipe(concat('scripts.min.js'))
     .pipe(uglify()) // Mifify js (opt.)
