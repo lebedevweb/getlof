@@ -8,6 +8,7 @@
     "@babel/preset-env": "^7.14.4",
     "browser-sync": "^2.26.10",
     "del": "^3.0.0",
+    "eslint": "^7.32.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -23,12 +24,16 @@
     "gulp-uglify": "^3.0.1"
   },
   "scripts": {
+    "lint": "eslint ../",
+    "lintfix": "eslint ../ --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
     "gulp-pug": "^4.0.1"
   }
 }

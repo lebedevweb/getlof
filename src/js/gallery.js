@@ -1,10 +1,9 @@
-let images = document.querySelectorAll('.gallery_images');
-const lightbox = document.querySelector('.gallery_lightbox'),
-      lightboxImage = document.querySelector('.gallery_lightbox_image');
-let imgIndex;
+(() => {
+  let images = document.querySelectorAll('.gallery_images');
+  const lightbox = document.querySelector('.gallery_lightbox'),
+    lightboxImage = document.querySelector('.gallery_lightbox_image');
+  let imgIndex;
 
-
-(function () {
   if (lightbox) {
     for (const image of images) {
       setListener(image, 'click', function () {
@@ -14,7 +13,6 @@ let imgIndex;
       });
     }
     const close = document.querySelector('.gallery_lightbox_header_close');
-
 
     setListener(close, 'click', closeLightbox);
 

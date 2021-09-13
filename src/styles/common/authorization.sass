@@ -1,0 +1,56 @@
+.authorization
+	position: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: rgba($dark,.7)
+	z-index: 2000
+
+	&_popup
+		width: 100%
+		max-width: 450px
+		background-color: $light
+		border-radius: 10px
+
+	&_header
+		padding: 20px
+
+		&_close
+			display: block
+			cursor: pointer
+			width: 15px
+			height: 15px
+			margin-left: auto
+
+			& > svg
+				fill: $grey
+				transition: fill .5s ease-out
+
+			&:hover
+				& > svg
+					fill: $danger
+
+	&_body
+		padding-right: 11%
+		padding-left: 11%
+
+	&_form
+		box-sizing: border-box
+		margin-bottom: 0
+
+		&_input
+			display: block
+			width: 100%
+			padding-top: 5px
+			padding-bottom: 5px
+			border-bottom: 1px solid $grey
+
+			&:not(:last-child)
+				margin-bottom: 15px
+
+		&_button
+

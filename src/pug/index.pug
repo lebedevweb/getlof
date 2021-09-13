@@ -2,7 +2,8 @@ doctype html
 html(lang="ru")
   include components/head.pug
   body
-    include components/header.pug
+    include components/header
+    include components/sidemenu
     main(class="home container")
       section(class="slider")
         div(class="slider_back")
@@ -40,7 +41,7 @@ html(lang="ru")
               p Трепетный подход к каждому блюду
 
           article(class="home_why_blocks")
-            include ../images/home/box.svg
+            include ../images/home/shield.svg
             div
               h3 Аккуратно
               p Доставим в целости и сохранности
@@ -50,7 +51,7 @@ html(lang="ru")
         h2(class="home_title") Рестораны
         div(class="home_rests_row")
           article(class="restaurants")
-            div(class="restaurants_image_container")
+            a(class="restaurants_image_container" href="#0")
               img(class="restaurants_image" src="./images/home/rests/leo.jpg" alt="" width="100%" height="200")
             div(class="restaurants_content")
               h3
@@ -58,7 +59,7 @@ html(lang="ru")
               p г. Санкт-Петербург, уд. Гаврилова д.12
 
           article(class="restaurants")
-            div(class="restaurants_image_container")
+            a(class="restaurants_image_container" href="#0")
               img(class="restaurants_image" src="./images/home/rests/lobby.jpg" alt="" width="100%" height="200")
             div(class="restaurants_content")
               h3
@@ -66,7 +67,7 @@ html(lang="ru")
               p г. Санкт-Петербург, уд. Гаврилова д.12
 
           article(class="restaurants")
-            div(class="restaurants_image_container")
+            a(class="restaurants_image_container" href="#0")
               img(class="restaurants_image" src="./images/home/rests/budu_eshe.jpg" alt="" width="100%" height="200")
             div(class="restaurants_content")
               h3
@@ -93,4 +94,5 @@ html(lang="ru")
         div
           button(class="btn btn_more") Показать ещё
 
-    include components/footer.pug
+
+    include components/footer

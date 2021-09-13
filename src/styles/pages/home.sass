@@ -33,11 +33,13 @@
     &_blocks
       box-sizing: border-box
       display: flex
+      position: relative
       align-items: center
       justify-content: space-between
       width: 24%
       border-radius: 10px
       padding: 2.2% 1.5%
+
 
       @media only screen and (max-width: 1199px)
         width: 48%
@@ -46,74 +48,50 @@
           margin-top: 20px
 
       @media only screen and (max-width: 767px)
-        padding: 3% 2.2%
+        padding: 4% 3%
 
         &:nth-child(n+3)
           margin-top: 10px
 
       &:first-child
-        background: linear-gradient(90deg, #C9D6FF 0%, #E2E2E2 100%)
-
-        & > svg
-          width: 100px
-
-          @media only screen and (max-width: 1680px)
-            width: 70px
-
-          @media only screen and (max-width: 767px)
-            width: 40px
+        background: linear-gradient(90deg, #B3C5FF 0%, #6885E0 100%)
 
       &:nth-child(2)
         background: linear-gradient(90deg, #D66D75 0%, #E29587 100%)
 
-        & > svg
-          width: 100px
-
-          @media only screen and (max-width: 1680px)
-            width: 70px
-
-          @media only screen and (max-width: 767px)
-            width: 38px
-
       &:nth-child(3)
         background: linear-gradient(89.87deg, #556270 0.13%, #FF6B6B 117.72%)
-
-        & > svg
-          width: 100px
-
-          @media only screen and (max-width: 1680px)
-            width: 70px
-
-          @media only screen and (max-width: 767px)
-            width: 40px
 
       &:last-child
         background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%)
 
-        & > svg
-          width: 70px
-
-          @media only screen and (max-width: 1680px)
-            width: 50px
-
-          @media only screen and (max-width: 767px)
-            width: 30px
-
       & > svg
         fill: $light
+        height: 80px
+
+        @media only screen and (max-width: 1680px)
+          height: 60px
+
+        @media only screen and (max-width: 767px)
+          position: absolute
+          top: 10%
+          right: 10px
+          height: 80%
+          fill: rgba($light,.3)
+
 
       & > div
-        width: 58%
+        width: 62%
         color: $light
 
         @media only screen and (max-width: 1680px)
-          width: 66%
+          width: 65%
 
         @media only screen and (max-width: 1199px)
-          width: 77%
+          width: 76%
 
         @media only screen and (max-width: 767px)
-          width: 64%
+          width: 100%
 
         & > h3
           font-weight: 700
@@ -121,7 +99,7 @@
           margin-bottom: 10px
 
           @media only screen and (max-width: 1680px)
-            font-size: 28px
+            font-size: 26px
 
           @media only screen and (max-width: 1199px)
             font-size: 20px
@@ -140,7 +118,7 @@
             font-size: 14px
 
           @media only screen and (max-width: 767px)
-            font-size: 12px
+            font-size: 13px
 
           & > span
             display: block
@@ -216,9 +194,7 @@
 
       & > .card
         margin-bottom: 40px
-
-        @media only screen and (max-width: 1680px)
-          width: 32%
+        width: 32%
 
         @media only screen and (max-width: 767px)
           width: 100%

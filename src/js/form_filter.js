@@ -1,3 +1,4 @@
+(() => {
 let btnFilter = document.querySelector('.btn_filter'),
     btnFormFilter = document.getElementById('btn_form_filter');
 
@@ -7,6 +8,7 @@ if (btnFilter) {
 if (btnFormFilter) {
   btnFilter.addEventListener('click', formFilter)
 }
+})()
 
 function formFilter() {
   let formfilter = document.querySelector('.form_filter');

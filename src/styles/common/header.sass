@@ -37,10 +37,32 @@
         width: 100%
         height: auto
 
+  &_menu
+    display: flex
+    list-style: none
+    //margin-left: auto
+    margin-right: auto
+
+    @media only screen and (max-width: 1199px)
+      display: none
+
+    &_item
+      &:nth-child(n+2)
+        margin-left: 100px
+
+        @media only screen and (max-width: 1680px)
+          margin-left: 70px
+
+      & > a
+        color: inherit
+        text-decoration-color: transparent
+        transition: text-decoration-color 0.5s ease-out
+
+        &:hover
+          text-decoration-color: inherit
 
 
   &_button
-    cursor: pointer
     display: flex
     align-items: center
     border-left: solid 1px $default
@@ -48,6 +70,15 @@
 
     @media only screen and (max-width: 1199px)
       display: none
+
+    & > a
+      display: flex
+      color: inherit
+      text-decoration-color: transparent
+      transition: text-decoration-color 0.5s ease-out
+
+      &:hover
+        text-decoration-color: inherit
 
     &_menu
       position: relative
@@ -131,31 +162,24 @@
           display: block
           margin: auto
 
-    &.back
-      padding: 29px 30px
-
-      & > a
-        text-decoration: none
-        color: inherit
-        background-color: $default
-        padding: 5px 10px
-        border-radius: 5px
-
     & > svg
       fill: $dark
       margin-right: 10px
       width: auto
       height: 14px
 
-    & span
-      display: flex
-      align-items: center
-      font-weight: 500
-      font-size: 18px
-
-    &_active
+    &.active
       background: $primary
       color: $light
 
       & > svg
         fill: $light
+
+
+  &_cart
+    & > span
+      margin-left: 5px
+      font-weight: 700
+
+  &_login
+    cursor: pointer
