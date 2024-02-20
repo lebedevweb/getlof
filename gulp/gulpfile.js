@@ -7,7 +7,8 @@ const del = require('del'); // Удаление файлов
 const browserSync = require('browser-sync').create(); // Синхронизация с браузером
 const notify = require('gulp-notify');
 const sourcemaps = require('gulp-sourcemaps'); // Создает карту для препроцессоров стилей
-const sass = require('gulp-sass'); // Sass препроцессор
+const sass = require('sass');
+const gulpSass = require('gulp-sass')(sass); // Sass препроцессор
 // const less = require('gulp-less'); // Less препроцессор
 // const stylus = require('gulp-stylus'); // Stylus препроцессор
 const babel = require('gulp-babel');
@@ -50,7 +51,7 @@ gulp.task('html', () => gulp.src(htmlFiles)
 // Таск для обработки стилей
 gulp.task('styles', () => gulp.src(styleFiles)
   .pipe(sourcemaps.init())
-  .pipe(sass({ outputStyle: 'expand' }).on('error', notify.onError()))
+  .pipe(gulpSass().on('error', gulpSass.logError))
   .pipe(autoprefixer(['>0.2%', 'not dead', 'not op_mini all']))
   .pipe(cleancss({
     level: {
@@ -60,12 +61,11 @@ gulp.task('styles', () => gulp.src(styleFiles)
         restructureRules: false,
       },
     },
-  })) // Opt., comment out when debugging
+  }))
   .pipe(sourcemaps.write())
   .pipe(rename({
     suffix: '.min',
   }))
-  // Выходная папка для стилей
   .pipe(gulp.dest('../build/css'))
   .pipe(browserSync.stream()));
 
